@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>VitaLab - Seleção de Personagem</title>
+  <link rel="stylesheet" href="./homeJ.css">
+  <link rel="stylesheet" href="./homeJ.js">
+</head>
+<body>
+  <h1>VitaLab</h1>
+  <h2>Escolha seu personagem</h2>
+  
+  <div class="characters">
+    <img src="../IMGSjogo/player1.png" alt="Personagem 1" onclick="selectCharacter('player1.png')" class="player1">
+    <img src="../IMGSjogo/player2.png" alt="Personagem 2" onclick="selectCharacter('player2.png')" class="player2">
+    <img src="../IMGSjogo/player3.png" alt="Personagem 3" onclick="selectCharacter('player3.png')" class="player3">
+  </div>
+
+  <button onclick="startGame()">Começar Jogo</button>
+
+  <script>
+    let selectedPlayer 
+
+function selectCharacter(character) {
+  if (selectedPlayer) {
+    selectedPlayer.classList.remove('image-selected')
+  }
+  localStorage.setItem('selectedCharacter', character);
+
+  const [player, _] = character.split('.');
+  selectedPlayer = document.querySelector(`.${player}`);
+  selectedPlayer.classList.add('image-selected');
+}
+function startGame() {
+  window.location.href = '../jogo.html';
+}
+  </script>
+
+
+</body>
+</html>

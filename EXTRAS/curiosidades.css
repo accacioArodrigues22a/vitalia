@@ -1,0 +1,111 @@
+.conteudo {
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+
+}
+
+body {
+  background-color: #DFEFC1;
+  background-image: url(../HOME/imgs/fundinho.png);
+
+  padding: 0;
+  overflow-x: hidden;
+  margin: 5rem 6rem;
+
+}
+
+h1,
+h2,
+p {
+  color: #000;
+}
+
+
+h1 {
+
+  font-family: "Literata", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+
+}
+
+h2 {
+  font-family: "Literata", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+
+
+}
+
+h3 {
+  font-family: "Literata", sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 20px;
+
+
+}
+
+p {
+  font-family: "Sulphur Point", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  margin-top: 3.2rem;
+
+}
+
+.texto2 {
+  background-color: #FFD93D;
+  
+  padding-left: 2rem;
+  padding-right: 14rem;
+  border-radius: 12px;
+  color: #000;
+
+  position: relative;
+  z-index: -2;
+
+  margin-right: -12rem;
+
+}
+
+.imgEtexto2 {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: right;
+
+  p {
+    width: 39rem;
+  }
+
+}
+
+.cacau,
+.graos,
+.espinafre {
+  margin-top: 4rem;
+  align-items: center;
+  text-align: right;
+  gap: 12rem;
+  margin-right: 4rem;
+}
+
+.alho,
+.frutas,
+.titulo {
+  margin-left: 4rem;
+
+
+}
+
+.conteudo img {
+  width: 20rem;
+}
+
+.titulo {
+  margin-top: 8rem;
+  width: 53rem;
+}

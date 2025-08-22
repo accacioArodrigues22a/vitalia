@@ -1,0 +1,56 @@
+body {
+    background-color: #FFEEB7;
+    background-image: url(../../assets/fundo.png);
+
+    padding: 0;
+    overflow-x: hidden;
+    margin: 5rem 6rem;
+
+}
+
+
+.conteudo{
+
+    line-height: 1.1;
+  
+    padding: 0;
+
+}
+
+.conteudo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    
+   
+
+}
+.folha-logo{
+    width: 30rem;
+}
+
+
+.botaoIniciar {
+    background-color: transparent;
+    border: 1px solid #213807;
+    color: #213807;
+    padding: 10px 80px;
+    border-radius: 8px;
+    
+}
+
+.imagem {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding: 0;
+    margin : 0;
+
+}
+
+.imagem img {
+    width: 37rem;
+    
+}

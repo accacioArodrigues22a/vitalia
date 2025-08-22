@@ -1,0 +1,137 @@
+body{
+  background: url(../HOME/imgs/fundinho-dicas.png), linear-gradient(to bottom, rgb(98, 56, 0) 50%, rgb(85, 1, 1) 100%);
+}
+
+.tudo {
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+  margin: 0 6rem;
+  margin-top: 7rem;
+  padding: 0;
+  color: #333;
+  
+  overflow-x: hidden;
+}
+
+
+.poligono{
+  width: 0;
+  height: 0;
+  border-left: 35rem solid transparent;
+  border-bottom: 35rem solid #5a1211;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-90deg);
+  z-index: -1;
+}
+
+
+h1, h2, h4, p{
+  color: #FEFAE1;
+}
+
+
+h1{
+
+    font-family: "Literata", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+
+}
+
+h2{
+    font-family: "Literata", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+    
+
+
+}
+.conteudo p, h2,img {
+  
+}
+
+.conteudo p{
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 3.2rem;
+    
+}
+
+
+.imagem img{
+  width: 25rem;
+}
+
+.seta{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+ .titulo {
+      max-width: 49rem;
+      max-height: 395px;
+    
+      line-height: 1.1;
+ }
+
+ .primeiraDica{
+    display: flex;
+    margin-top: 5rem;
+     align-items: center;
+     gap: 6rem;
+ }
+
+
+
+ .segundaDica{
+    display: flex;
+    margin-top: 8rem;
+     align-items: center;
+     text-align: right;
+     gap: 6rem;
+ }
+ .terceiraDica{
+    display: flex;
+    margin-top: 8rem;
+     align-items: center;
+     gap: 6rem;
+    
+ }
+
+ .quartaDica{
+    display: flex;
+    margin-top: 8rem;
+     align-items: center;
+     text-align: right;
+     gap: 7rem;
+ }
+
+
+ 
+.fluxo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+}
+
+.setaEsquerda {
+  transform: rotate(180deg);
+  width: 24px;
+}
+
+.setaDireita {
+  width: 24px;
+}

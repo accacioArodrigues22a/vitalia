@@ -1,0 +1,349 @@
+body{
+  overflow-x: hidden;
+}
+
+
+.tudo {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("./imgs/fundo-home-ofc.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.tudo {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.folha-logo {
+  height: 28px;
+  margin-left: 8px;
+  transform: translateY(-35px); /* Joga a folhinha para cima */
+  margin-left: -20px;
+} 
+
+.inicio{
+  margin-top: 20rem;
+
+}
+
+.popup {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  background-color: #4a0c0c;
+  width: 377px;
+  height: 331px;
+  border-radius: 30px;
+  z-index: 1000; /* z-index é uma propriedade CSS que define a ordem de empilhamento de elementos sobrepostos em uma página web, ou seja, qual elemento aparece na frente ou atrás de outro. */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-popup{
+  width: 65px;
+  height: 88px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.popup h3{
+  font-family: 'Literata', serif;
+  text-decoration: underline; /* sublinha*/
+  color: #FBB02D;
+  font-size: 28px;
+  margin-top: 15px;
+  text-decoration: underline;
+  text-align: center; /* alinha no centro o título*/
+}
+
+.popup p{
+  color: #fff;
+  font-family: 'Sulphur Point', serif;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.popup .img-fechar{
+   width: 38px;
+   height: 37px;
+   margin-right: 3px;
+   margin-top: 6px;
+}
+
+.popup .fechar {
+  position: absolute;
+  top: 5px;
+  right: 19px;
+  font-size: 50px;
+  color: #fff;
+}
+
+main {
+  padding: 50px 5%;
+  min-height: 200vh;
+}
+
+.bloco-caminho {
+  text-align: center;
+  padding-top: 40px;
+  margin-top: 10rem;
+}
+
+.bloco-caminho .faixa-texto {
+  margin-top: 0;
+}
+
+.titulo {
+  font-family: 'Literata', serif;
+  font-size: 1.8rem;
+  color: #4a0c0c;
+  margin-bottom: -8px;
+  background-color: #D9D9D9;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 12px;
+  letter-spacing: 2px;
+}
+
+.faixa-texto {
+  background-color: #D9D9D9;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Sulphur Point', sans-serif;
+}
+
+.faixa-texto p {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.texto-verde {
+  color: #A1CF6B;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+
+.fundo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  position: relative;
+}
+
+.fundo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; 
+  z-index: 1;
+}
+
+
+.conteudo {
+  color: white;
+  max-width: 500px;
+  z-index: 2;
+  position: relative; 
+}
+
+
+.conteudo h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: 'Literata', serif;
+}
+
+.conteudo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Sulphur Point', sans-serif;
+}
+
+.conteudo p span {
+  color: #ff8661; 
+}
+
+  
+.linha-tempo {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.evento {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) {
+  flex-direction: row;
+}
+
+.evento .conteudo {
+  position: relative;
+  background: none;
+  color: white;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 1.2rem;
+  width: 250px;
+  z-index: 2;
+}
+
+.evento .imagem {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 10px #000;
+  object-fit: cover;
+  z-index: 3;
+}
+
+.linha-impar,
+.linha-par {
+  position: absolute;
+  width: 18rem;
+  height: 4px;
+  background: white;
+  z-index: 2;
+  transform-origin: right center;
+}
+
+.linha-impar {
+  rotate: 45deg;
+  bottom: -170px;
+}
+
+.linha-par {
+  rotate: -45deg;
+  bottom: 100px;
+}
+
+.teste {
+  rotate: 45deg;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  top: 60px;
+}
+
+.teste2 {
+  rotate: -45deg;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  top: 70px;
+}
+
+
+.rodape {
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  margin-top: 5rem;
+}
+
+
+#ultima-imagem{
+  transform: translateX(150px); /* move 20px para a direita */
+}
+
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo h1 {
+  font-family: 'Literata', serif;
+  font-weight: normal;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+.leaf-icon img{
+  width: 8rem;
+}
+
+.rodape hr {
+  width: 100%;
+  border: 0.5px solid #444;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-content h3 {
+  margin-bottom: 10px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content li {
+  margin-bottom: 5px;
+}
+
+.feedback a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.feedback a:hover {
+  color: #ffffff;
+}
+
+
+.footer-content{
+  
+  ul {
+    list-style-type: none;
+    padding-left: 40px; 
+  }
+  
+  ul li {
+    display: list-item; 
+  }
+}
+
+.feedback{
+  margin-top: 2rem;
+}
+

@@ -1,0 +1,119 @@
+body{
+    background-color: #713C12;
+    background-image: url(../HOME/imgs/fundinho.png);
+    overflow-x: hidden;
+}
+
+
+
+.conteudo{
+
+    line-height: 1.1;
+    margin: 0 6rem;
+    margin-top: 7rem;
+    padding: 0;
+
+}
+
+h1, h2, h4, p, ul{
+    color: #F5F5F5;
+}
+  
+  
+  h1{
+  
+      font-family: "Literata", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 48px;
+  
+  }
+  
+  h2{
+      font-family: "Literata", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 28px;
+  }
+
+  h4{
+    font-family: "Literata", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 27px;
+
+  }
+
+.conteudo p{
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 3.2rem;
+}
+
+  .primeiroParagrafo{
+    display: flex;
+    margin-top: 4rem;
+     align-items: center;
+     text-align: right;
+     gap: 12rem;
+ }
+
+ .segundoParagrafo{
+    display: flex;
+    margin-top: 4rem;
+     align-items: center;
+     gap: 12rem;
+ }
+
+ .evite{
+    background-color: #512D11;
+    max-width: 30rem;
+    margin: auto;
+    border-bottom: 1.5rem solid #512D11;
+    border-left: 1rem solid #512D11;
+    border-right: 5rem solid #512D11;
+   
+
+    ul {
+        list-style-type: square;
+        padding-left: 40px; 
+      }
+      
+      ul li {
+        display: list-item; 
+      }
+    
+ }
+
+ .imagem{
+    background-color: #512D11;
+    border-radius: 15%;
+}
+
+.imagem img{
+    width: 22rem;
+}
+
+
+.fluxo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.setaEsquerda {
+    transform: rotate(180deg);
+    width: 24px;
+  }
+  
+.setaDireita {
+    width: 24px;
+  }

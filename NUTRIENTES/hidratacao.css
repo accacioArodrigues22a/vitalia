@@ -1,0 +1,135 @@
+body {
+    background-image: url(../HOME/imgs/fundinho.png);
+    background-color: #5A6E79;
+    line-height: 1.1;
+    margin: 0 6rem;
+    margin-top: 7rem;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.semicirculo {
+    position: absolute;           
+    top: -300px;                
+    right: -300px;              
+    width:  920px;
+    height:  830px;
+    background-color: #B8BEC1;
+    border-radius: 50%;                 
+    overflow: hidden;         
+    z-index: -1;                  
+}
+
+.semicirculo img {
+    width: 50%; 
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    top: 370px;
+    left: 125px;
+}
+.primeiroParagrafo, .segundoParagrafo{
+    max-width: 750px;
+}
+
+.segundoParagrafo{
+    margin-bottom: 100px;
+}
+
+.terceiroParagrafo{
+    max-width: 1050px;
+}
+
+.quartoParagrafo{
+    max-width: 965px;
+}
+
+
+h1,h2,h4,ul {
+    color: #F5F5F5;
+    margin-left: 116px;
+    margin-top: 100px;
+}
+
+.conteudo p {
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 3.2rem;
+    color: #F5F5F5;
+    margin-left: 116px;
+}
+ 
+
+
+h1 {
+
+    font-family: "Literata", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 48px;
+
+}
+
+h2 {
+    font-family: "Literata", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 28px;
+}
+
+h4 {
+    font-family: "Literata", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 27px;
+
+}
+
+
+.conteudo p {
+    font-family: "Sulphur Point", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 3.2rem;
+    
+}
+
+
+.elemento {
+    width: 26rem; 
+  }
+
+
+  .fluxo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+
+        p{
+            color: #F5F5F5;
+        }
+    }
+}
+
+.setaEsquerda {
+    transform: rotate(180deg);
+    width: 24px;
+    margin-left: 7.5rem;
+  }
+
+  
+.setaDireita {
+    width: 24px;
+    margin-right: 7.5rem;
+  }
