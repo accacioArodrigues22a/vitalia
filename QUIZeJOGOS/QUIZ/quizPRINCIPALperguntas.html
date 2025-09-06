@@ -14,26 +14,38 @@
 <body>
     <div class="container">
         <div id="game" class="justify-centerflex-column">
+            <div class="botao-classe">
+                <a href="./quizPRINCIPAL.html"><button class="botao-sair">SAIR</button></a>
+            </div>
             <div class="firstQuestion">
-            <h2 id="question" class="questionnumber1">1.</h2>
-            <h2 class="questiontext1"></h2>
+                <h2 class="questiontext1"></h2>
             </div>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
                 <p class="choice-text" data-number="1"></p>
             </div>
-            <button id="next-button" style="display: none;">Próxima Pergunta</button>
             <div class="choice-container">
                 <p class="choice-prefix">B</p>
                 <p class="choice-text" data-number="2"></p>
             </div>
-            <button id="next-button" style="display: none;">Próxima Pergunta</button>
             <div class="choice-container">
                 <p class="choice-prefix">C</p>
                 <p class="choice-text" data-number="3"></p>
             </div>
-            
+            <div class="next-button">
+                <button class="the-real-button">PRÓXIMA PERGUNTA</button>
+            </div>
+            <br>
+            <div id="bar">
+                <div id="inabar">
+
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<style>
+    #bar {background-color: whitesmoke; width: 50rem; height: 1rem; border-radius: 2rem;}
+    #inabar{background-color: #FBB02D; width: 0%; height: 1rem; border-radius: 2rem;}
+</style>
 </html>

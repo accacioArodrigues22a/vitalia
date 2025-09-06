@@ -84,10 +84,12 @@ h4 {
     border-radius: 15%;
 }
 
-.imgConteudo{
-    width: 22rem;
+.imgConteudo1 img{
+    width: 19rem;
 }
-
+.imgConteudo{
+    width:28rem;
+}
 
 .fluxo{
     display: flex;

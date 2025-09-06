@@ -1,27 +1,49 @@
 body {
     background-color: #420E0D;
-    background-image: url(/home/user/edutec/assets/fundoQuizPRINCIPAL.jpg);
+    background-image: url(../../assets/fundoQuizz.jpeg);
 
     padding: 0;
     overflow-x: hidden;
     margin: 5rem 6rem;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container {
+.botao-classe {
     display: flex;
-    width: 100%;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.botao-sair {
+    font-family: "Lato", sans-serif;
+    background-color: #931f1dcc;
+    color: white;
+    border: none;
+    padding: 10px 80px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.botao-sair:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #931f1dcc;
+    transition: transform 150ms;
+    transform: translateY(-0.1rem);
 }
 
 .choice-container {
     display: flex;
+    align-items: center;
+    gap: 40px;
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
     background-color: white;
-    border-radius: 5%;
+    border-radius: 15px;
+    padding-inline: 1rem;
 }
 
 .choice-container:hover {
@@ -30,6 +52,7 @@ body {
     transition: transform 150ms;
     transform: translateY(-0.1rem);
     background-color:#FBB02D;
+    color: white;
 
     .choice-prefix {
         background-color: #931F1D;
@@ -38,29 +61,71 @@ body {
 
 .choice-prefix {
     font-family: "Lato", sans-serif;
-    padding: 1.5rem 2.5rem;
+    /* padding: 1.5rem 2.5rem; */
     background-color: #FBB02D;
-    color:aliceblue;
+    color: white;
     border-radius: 100%;
-    width: 0.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
 }
 
 .choice-text {
     font-family: "Lato", sans-serif;
-    padding: 1.5rem;
-    width: 100%;
+    font-weight: 700;
 }
 
 .questiontext1 {
     color: white;
 }
 
-.questionnumber1 {
-    color: #FBB02D;
+.question-number {
+    color:#FBB02D;
 }
 
 .firstQuestion {
+    padding-bottom: 2rem;
+    width: 900px;
+    font-size: 40px;
     display: flex;
+    align-items: center;
+}
+
+.correct {
+    background-color: greenyellow;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.the-real-button {
+    font-family: "Lato", sans-serif;
+    background-color: transparent;
+    border: 1px solid #FBB02D;
+    color: #FBB02D;
+    padding: 10px 80px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.the-real-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 151, 14, 0.5);
+    transition: transform 150ms;
+    transform: translateY(-0.1rem);
+    background-color: #FBB02D;
+    color: white;
 }
 
 .selected {

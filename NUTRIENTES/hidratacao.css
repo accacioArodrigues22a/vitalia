@@ -9,127 +9,122 @@ body {
 }
 
 .semicirculo {
-    position: absolute;           
-    top: -300px;                
-    right: -300px;              
-    width:  920px;
-    height:  830px;
+    position: absolute;
+    top: -18.75rem;
+    right: -18.75rem;
+    width: 57.5rem;
+    height: 51.875rem;
     background-color: #B8BEC1;
-    border-radius: 50%;                 
-    overflow: hidden;         
-    z-index: -1;                  
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: -1;
 }
 
 .semicirculo img {
-    width: 50%; 
+    width: 50%;
     height: auto;
     object-fit: cover;
     position: relative;
-    top: 370px;
-    left: 125px;
-}
-.primeiroParagrafo, .segundoParagrafo{
-    max-width: 750px;
+    top: 23.125rem;
+    left: 7.700rem;
 }
 
-.segundoParagrafo{
-    margin-bottom: 100px;
+.primeiroParagrafo,
+.segundoParagrafo {
+    max-width: 46.875rem;
 }
 
-.terceiroParagrafo{
-    max-width: 1050px;
+.segundoParagrafo {
+    margin-bottom: 6.25rem;
 }
 
-.quartoParagrafo{
-    max-width: 965px;
+.terceiroParagrafo {
+    max-width: 65.625rem;
 }
 
+.quartoParagrafo {
+    max-width: 60.3125rem;
+}
 
-h1,h2,h4,ul {
+h1, h2, h4, ul {
     color: #F5F5F5;
-    margin-left: 116px;
-    margin-top: 100px;
+    margin-left: 7.25rem;
+    margin-top: 6.25rem;
 }
 
 .conteudo p {
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
     color: #F5F5F5;
-    margin-left: 116px;
+    margin-left: 7.25rem;
 }
- 
-
 
 h1 {
-
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
-
+    font-size: 3rem;
 }
 
 h2 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 h4 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 27px;
-
+    font-size: 1.6875rem;
 }
-
 
 .conteudo p {
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
-    
 }
 
-
 .elemento {
-    width: 26rem; 
-  }
+    width: 26rem;
+}
 
-
-  .fluxo{
+.fluxo {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
     margin-bottom: 1rem;
+}
 
-    div {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
+.fluxo div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 
-
-        p{
-            color: #F5F5F5;
-        }
-    }
+.fluxo div p {
+    color: #F5F5F5;
 }
 
 .setaEsquerda {
     transform: rotate(180deg);
-    width: 24px;
+    width: 1.5rem;
     margin-left: 7.5rem;
-  }
+}
 
-  
 .setaDireita {
-    width: 24px;
+    width: 1.5rem;
     margin-right: 7.5rem;
-  }
+}
+
+.setaDireita,
+.setaEsquerda{
+    cursor: pointer;
+}

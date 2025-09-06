@@ -28,7 +28,7 @@ h1{
     font-weight: 700;
     font-style: normal;
     font-size: 48px;
-    margin-top: 4rem;
+    margin-top: 10rem;
 
 }
 
@@ -52,6 +52,7 @@ h2{
 }
 
 
+
 .botao1,
 .botao2,
 .botao3,
@@ -63,18 +64,22 @@ h2{
 .botao9{
   background-color: #C18825;
   color: #FEFAE1;   
-  padding: 40px;
-
+  padding: 3rem;
+  align-items: center;
   border: none;        
-  border-radius: 40px;
+  border-radius: 5rem;
 
-  font-size: 20px;
-  height: 8rem;
+  font-size: 1.2rem;
+  height: 10rem;
   transition: 0.4s;
-
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
+strong{
+  color: #C18825;
+  text-decoration: underline;
+}
 
 
 .botoes{
@@ -85,11 +90,16 @@ h2{
     width: fit-content; 
     margin: 8rem auto; 
     margin-inline: 6rem;
-    
+
+    button{
+      font-family: "Sulphur Point", sans-serif;
+      font-size: 23px;
+    }
 }
 
-button:hover{
-  opacity: 0.8;
+.botoes button:hover{
+  background-color: #ad7410;
+  
 }
 
 .fechar{
@@ -216,4 +226,23 @@ button:hover{
 #modal8{
   background-color: #420E0D;
 
+}
+
+.proximo{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-right: 2rem;
+  p{
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #000;
+  }
+
+  img{
+    width: 2.5rem;
+  }
 }

@@ -14,14 +14,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
     <script src="./curiosidades.js"></script>
+
+    <script src="siema.min.js" defer></script>
+    <script src="curiosidades.js" defer></script>
+    <link rel="shortcut icon" href="../HOME/imgs/1-e6fb7e66.ico">
     <title>Curiosidades</title>
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="../HOME/home.html">
+            <a href="../HOME/index.html">
                 <img src="../HOME/imgs/LOGO-VITALIA.png" alt="Logo" />
             </a>
         </div>
@@ -78,6 +86,7 @@
         </nav>
     </header>
 
+
     <div class="conteudo">
         <div class="titulo">
             <div class="texto">
@@ -91,10 +100,17 @@
                     A nutrição vai muito além da simples alimentação, influenciando a função cerebral, a saúde do
                     coração, a imunidade e muito mais. <br><br>
 
-                    Prepare-se para descobrir dicas valiosas que podem transformar seus hábitos e melhorar sua qualidade
-                    de vida!
+                    Prepare-se para descobrir dicas valiosas que podem transformar seus hábitos e melhorar sua
+                    qualidade
+                    de vida! <br><br>
+
+                    <span>No final da página, você encontra vídeos relacionados para se aprofundar ainda mais nesses temas e descobrir dicas práticas de alimentação e saúde.</span>
                 </p>
             </div>
+        </div>
+
+        <div class="cliqe">
+            <p>CLIQUE NAS IMAGENS PARA SABER MAIS!</p>
         </div>
 
 
@@ -104,7 +120,7 @@
                     <h3>1.Cacau melhora a função cerebral e a saúde cardiovascular</h3>
                 </div>
                 <div class="imgEtexto2">
-                    <div class="texto2">
+                    <div class="texto2 info" id="info-cacau">
                         <p>O cacau, principalmente o presente no chocolate amargo, é uma fonte rica em flavonoides,
                             antioxidantes que favorecem a circulação sanguínea no cérebro e contribuem para a saúde
                             cognitiva. <br><br>
@@ -114,12 +130,18 @@
                             pode melhorar a memória, a concentração e ainda combater os efeitos do envelhecimento
                             cerebral.
                         </p>
+
+                        <div class="textinho">
+                            <p class="fonte">
+                                Fonte: Harvard T.H. Chan School of Public Health
+                            </p>
+                        </div>
                     </div>
 
                     <div class="imagem">
-                        <img src="./IMGSextras/CACAU.png" alt="imagem cacau">
+                        <img src="./IMGSextras/CACAU.png" alt="imagem cacau" onclick="mostrarInfo('info-cacau')">
                     </div>
-                    
+
 
                 </div>
             </div>
@@ -127,40 +149,206 @@
                 <div class="texto">
                     <h3>2.Alho fortalece o sistema imunológico</h3>
                 </div>
-                <div class="imagem">
-                    <img src="./IMGSextras/ALHO.png" alt="imagem alho">
+
+                <div class="imgEtexto3">
+                    <div class="imagem">
+                        <img src="./IMGSextras/ALHO.png" alt="imagem alho" onclick="mostrarInfo('info-alho')">
+                    </div>
+
+                    <div class="texto1 info" id="info-alho">
+                        <p>O alho é rico em alicina, composto com ação antimicrobiana que fortalece o sistema
+                            imunológico.
+                            Seu consumo pode reduzir infecções, combater resfriados e melhorar a microbiota
+                            intestinal.
+                            <br><br>
+
+                            Além disso, ajuda a diminuir o colesterol ruim (LDL) e protege o coração. Incluir alho
+                            na
+                            alimentação regularmente é uma forma natural de promover a saúde geral do organismo.
+
+                            
+                        </p>
+
+                        <div class="textinho">
+                            <p class="fonte">
+                                Fonte: National Institutes of Health
+                            </p>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
+
+
+
+
             <div class="espinafre">
                 <div class="texto">
                     <h3>3. Espinafre protege a saúde ocular</h3>
                 </div>
-                <div class="imagem">
-                    <img src="./IMGSextras/ESPINAFRE.png" alt="imagem espinafre">
+
+                <div class="imgEtexto2">
+                    <div class="texto2 info" id="info-espinafre">
+                        <p>O espinafre é rico em luteína e zeaxantina, antioxidantes que protegem os olhos da
+                            degeneração macular e da luz azul. <br> <br>
+
+                            Também contém vitamina K, essencial para ossos e coração, e ferro, importante para a
+                            produção de hemoglobina e prevenção da anemia. Seu consumo regular contribui para a
+                            saúde
+                            ocular, óssea, cardiovascular e combate à anemia.</p>
+
+                        <div class="textinho">
+                            <p class="fonte">
+                                Fonte: American Optometric Association
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imagem">
+                        <img src="./IMGSextras/ESPINAFRE.png" alt="imagem espinafre"
+                            onclick="mostrarInfo('info-espinafre')">
+                    </div>
                 </div>
             </div>
+
+
+
+
             <div class="frutas">
                 <div class="texto">
                     <h3>4. Frutas cítricas reduzem o risco de câncer</h3>
                 </div>
-                <div class="imagem">
-                    <img src="./IMGSextras/FRUTAS-CITRICAS.png" alt="imagem frutas-citricas">
+
+                <div class="imgEtexto3">
+                    <div class="imagem">
+                        <img src="./IMGSextras/FRUTAS-CITRICAS.png" alt="imagem frutas-citricas"
+                            onclick="mostrarInfo('info-frutas')">
+                    </div>
+
+                    <div class="texto1  info" id="info-frutas">
+                        <p>Frutas cítricas como laranjas, limões e toranjas são ricas em vitamina C, que fortalece o
+                            sistema imunológico e ajuda na reparação celular. <br> <br>
+
+                            A vitamina C também é essencial para a produção de colágeno, mantendo a pele saudável e
+                            firme. O consumo regular dessas frutas pode melhorar a elasticidade da pele, prevenir
+                            envelhecimento precoce e reduzir o risco de câncer.</p>
+
+                        <div class="textinho">
+                            <p class="fonte">
+                                Fonte: American Institute for Cancer Research
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+
+
+
+
             <div class="graos">
                 <div class="texto">
-                    <h3>5.Grãos integrais melhoram a digestão e reduzem o risco cardíaco</h3>
+                    <h3>5.Grãos integrais melhoram a digestão e reduzem o <br>risco cardíaco</h3>
                 </div>
-                <div class="imagem">
-                    <img src="./IMGSextras/GRAOS.png" alt="imagem graos">
+
+                <div class="imgEtexto2">
+                    <div class="texto2  info" id="info-graos">
+                        <p>Grãos integrais como aveia, quinoa e arroz integral são ricos em fibras que promovem a
+                            saúde
+                            digestiva, reduzem o colesterol LDL e ajudam a controlar a pressão arterial. <br> <br>
+
+                            O consumo regular desses grãos diminui o risco de doenças cardíacas, melhora a
+                            microbiota
+                            intestinal, regula o trânsito intestinal e previne a constipação, promovendo uma
+                            digestão
+                            saudável.</p>
+
+                        <div class="textinho">
+                            <p class="fonte">
+                                Fonte: American Heart Association
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="imagem">
+                        <img class="graos" src="./IMGSextras/GRAOS.png" alt="imagem graos"
+                            onclick="mostrarInfo('info-graos')">
+                    </div>
+
                 </div>
 
             </div>
         </div>
 
+
+
+
+       
+   
+        <div class="video">
+            <h1>VÍDEOS:</h1>
+
+            <p>Arraste para o lado para navegar entre os vídeos. <br> 
+                Clique em um vídeo para reproduzir.</p>
+            
+           
+        </div>
+    </div>
+    
+    <main>
+
+<div class="siema">
+            <div> <iframe width="333.3" height="210" src="https://www.youtube.com/embed/DeyZmAMbOcw" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div> <iframe width="333.3" height="210" src="https://www.youtube.com/embed/XSrh2prRRa4" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe></div>
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/t4VCAqhs2NY" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/ppTsAG5sQnQ" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/w91GkbV80BM" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/dT1j_nhI9Zk" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/1LZ4cEd-Vcs" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <iframe width="333.3" height="210" src="https://www.youtube.com/embed/w91GkbV80BM" title="YouTube video"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+  
+    </main>
+
+
+    <div class="proximo">
+        <a href="./mitosEverdadesPRINCIPAL.html"><img src="./IMGSextras/proximo2.png" alt=""></a>
+        <p>MITOS & VERDADES</p>
+        
     </div>
 
-    </div>
+
 
 </body>
 

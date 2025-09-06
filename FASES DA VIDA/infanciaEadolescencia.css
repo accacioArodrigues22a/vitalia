@@ -90,10 +90,11 @@ h4 {
 .imagem{
     background-color: #420E0D;
     border-radius: 15%;
+    padding: 2rem;
 }
 
 .imagem img{
-    width: 22rem;
+    width: 18rem;
 }
 
 

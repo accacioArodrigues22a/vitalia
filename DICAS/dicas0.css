@@ -5,7 +5,7 @@ body {
   margin-top: 7rem;
   padding: 0;
   color: #333;
-  background-color: #dac6b4;
+  background-color: #fec086a8;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
@@ -124,4 +124,26 @@ p {
 
 .setaDireita {
   width: 24px;
+}
+
+.botao{
+  font-family: "Literata", sans-serif;
+}
+
+.cl{
+  display: flex;
+  margin-inline: auto;
+  margin-block: auto;
+  justify-content: center;
+  margin-left: 28rem;
+
+  p{
+    font-weight: 800;
+  }
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #ff000059;
+    transition: 0.5s;
 }

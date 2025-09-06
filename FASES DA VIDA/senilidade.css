@@ -81,12 +81,13 @@ h4 {
 
 .imagem{
     background-color: #420E0D;
+    padding: 2rem;
     border-radius: 15%;
 }
 
 
 .imagem img{
-    width: 22rem;
+    width: 18rem;
 }
 
 

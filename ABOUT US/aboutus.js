@@ -1,35 +1,35 @@
 const perfis = {
     andressa: {
-      nome: "Andressa 🏵️",
-      user: "@andressaaxl",
+      nome: "🏵️ Andressa Acaccio",
+      user: "Instagram: @andressaaxl",
       faculdade: "Estuda no: UNASP-SP",
       resumo: "Organizada, decidida e sempre pronta pra ajudar.",
       imagem: "../HOME/imgs/andressa.png"
     },
     bruna: {
-      nome: "Bruna 🌸",
-      user: "@brunasmqs",
+      nome: "🌸 Bruna Silva",
+      user: "Instagram: @brunasmqs",
       faculdade: "Estuda no: UNASP-SP",
       resumo: "Criativa e determinada, fala pouco mas observa tudo.",
       imagem: "../HOME/imgs/bruna.png"
     },
     myria: {
-      nome: "Myriã 🌼",
-      user: "@myria.vi_",
+      nome: "🌼 Myriã de Pires",
+      user: "Instagram: @myria.vi_",
       faculdade: "Estuda no: UNASP-SP",
       resumo: "Mente inquieta e um coração que enxerga beleza onde ninguém mais vê.",
       imagem: "../HOME/imgs/userCinza.png"
     },
     nicolas: {
-      nome: "Nicolas 💫",
-      user: "@nic.dev",
+      nome: "💫 Nicolas de Souza",
+      user: "Sem rede social ativa no momento.",
       faculdade: "Estuda no: UNASP-SP",
       resumo: "Tranquilo por fora, mente acelerada por dentro.",
       imagem: "../HOME/imgs/userCinza.png"
     },
     rayssa: {
-      nome: "Rayssa 💗",
-      user: "@cqzray",
+      nome: "💗 Rayssa Cruz",
+      user: "Instagram: @cqzray",
       faculdade: "Estuda no: UNASP-SP",
       resumo: "Detalhista, ama estética e transforma tudo em arte.",
       imagem: "../HOME/imgs/rayssa.png"
