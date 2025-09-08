@@ -61,6 +61,7 @@ const getNewQuestion = () => {
     questionCounter++;
     
     document.querySelector("#inabar").style.width = `${questionCounter * 25}%`
+    document.querySelector("#percent").innerHTML = `${questionCounter * 25}%`
 
     const questionIndex =Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -84,15 +85,15 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number'];
 
         if(selectedAnswer == currentQuestion.answer) {
-            classToApply = 'correct';
+            classToApply = "correct";
             score = score + CORRECT_BONUS;
         } else {
-            classToApply = 'incorrect';
+            classToApply = "incorrect";
             correctAnswer = document.querySelector(`[data-number='${currentQuestion.answer}']`)
             correctAnswer.parentElement.classList.add("correct")
         }
 
-        classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
         selectedChoice.parentElement.classList.add(classToApply);
 
         console.log(selectedAnswer == currentQuestion.answer);
@@ -102,14 +103,18 @@ choices.forEach(choice => {
 
 const button = document.querySelector('.next-button button');
 button.addEventListener('click', () => {
+    if (selectedChoice && selectedChoice.parentElement) {
     selectedChoice.parentElement.classList.remove(classToApply);
-    correctAnswer.parentElement.classList.remove("correct")
+    }
+    if (correctAnswer && correctAnswer.parentElement) {
+    correctAnswer.parentElement.classList.remove("correct");
+    }
     getNewQuestion();
 });
 
 startGame();
 
-/* CHAT QUE FEZ. NICOLAS, DÊ UMA OLHADA.
+/*
 // Seletores principais
 const questionElement = document.querySelector('.questiontext1');
 const choiceElements = Array.from(document.getElementsByClassName('choice-text'));

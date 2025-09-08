@@ -138,3 +138,18 @@ body {
         background-color: #931F1D;
     }
 }
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0.7rem;
+}
+
+.porcentagem {
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: larger;
+    font-weight: 900;
+}

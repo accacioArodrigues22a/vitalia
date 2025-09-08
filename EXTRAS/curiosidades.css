@@ -6,7 +6,7 @@
 
 body {
   background-color: #DFEFC1;
-  background-image: url(../HOME/imgs/fundinho.png);
+  background-image: url(./IMGSextras/fundinho-curiosidades.png);
 
   padding: 0;
   overflow-x: hidden;
@@ -163,7 +163,7 @@ p{
 }
 
 
-.cliqe{
+.video{
   p{
   color: #7c0303;
   font-weight: bold;

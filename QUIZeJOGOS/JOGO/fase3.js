@@ -438,10 +438,10 @@ function movePlayer() {
   let nextX = player.x;
   let nextY = player.y;
 
-  if (keys['ArrowUp']) nextY -= player.speed;
-  if (keys['ArrowDown']) nextY += player.speed;
-  if (keys['ArrowLeft']) nextX -= player.speed;
-  if (keys['ArrowRight']) nextX += player.speed;
+  if (keys['ArrowUp'] || keys['W'] || keys['w']) nextY -= player.speed;
+  if (keys['ArrowDown'] || keys['S'] || keys['s']) nextY += player.speed;
+  if (keys['ArrowLeft'] || keys['A'] || keys['a']) nextX -= player.speed;
+  if (keys['ArrowRight'] || keys['D'] || keys['d']) nextX += player.speed;
 
   // Verifica limites do canvas e colisões
   if (nextX >= 0 && nextX + player.size <= canvas.width &&

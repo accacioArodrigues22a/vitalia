@@ -1,5 +1,8 @@
 body {
+  background-image: url(../../assets/fundoQUIZfinal.jpeg);
+
   padding: 0;
+  margin: 0;
   overflow-x: hidden;
   height: 100vh;
 }
@@ -258,13 +261,12 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
-border: 1px solid red;
 height: 100%;
 }
 
 .flex-center-flex-column {
-  width: 40%;
-  height: 50%;
+  width: 30%;
+  height: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,8 +274,60 @@ height: 100%;
   border-radius:2rem;
   background-color: #FBB02D;
   color: white;
+  gap: 1rem;
 }
 
-.botoes {
-  padding-top: 2rem;
+
+h1 {
+  font-family: "Literata", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Literata", sans-serif;
+  font-weight: lighter;
+}
+
+.texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.verde {
+  font-family: "Lato", sans-serif;
+  background-color: #56792E;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 10px 80px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.verde:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #56792E;
+  transition: transform 150ms;
+  transform: translateY(-0.1rem);
+}
+
+.vermelho {
+  font-family: "Lato", sans-serif;
+  background-color: #420E0D;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 10px 80px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.vermelho:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #420E0D;
+  transition: transform 150ms;
+  transform: translateY(-0.1rem);
 }
