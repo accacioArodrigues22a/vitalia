@@ -163,7 +163,7 @@ p{
 }
 
 
-.video{
+.cliqe{
   p{
   color: #7c0303;
   font-weight: bold;
@@ -173,7 +173,11 @@ p{
   margin-bottom: -7rem;
 }
 
-
+video{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -7rem;
+}
 .alho,
 .frutas,
 .titulo {
