@@ -116,6 +116,25 @@ startGame();*/
 
 const question = document.querySelector('.questiontext1');
 const choiceContainers = Array.from(document.getElementsByClassName('choice-container'));
+const exitBtn = document.getElementById("exit-btn"); // botão X
+const modal = document.getElementById("exit-modal");
+const confirmExit = document.getElementById("confirm-exit");
+const cancelExit = document.getElementById("cancel-exit");
+
+// abre o modal
+exitBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+// confirma saída
+confirmExit.addEventListener("click", () => {
+  window.location.href = "index.html"; // volta pro índice, por exemplo
+});
+
+// cancela saída
+cancelExit.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
 
 let currentQuestion = {};

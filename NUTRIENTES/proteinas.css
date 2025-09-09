@@ -17,17 +17,37 @@ body {
     background-color: #712A2A;
     border-radius: 50%;
     overflow: hidden;
-    z-index: -1;
-}
-
-.semicirculo img {
+  
+    /* z-index: -1;  <-- REMOVA */
+    z-index: 1; /* ou 0, mas nunca negativo se quiser hover */
+  }
+  
+  .semicirculo img {
     width: 55%;
     height: auto;
     object-fit: cover;
     position: relative;
     top: 20.625rem;
     left: 6.875rem;
-}
+  }
+  
+  /* efeito de girar */
+  .semicirculo .elemento {
+    width: 26rem;
+    transform-origin: center;
+    transition: transform .8s linear;
+    cursor: pointer;
+  }
+  
+  .semicirculo .elemento:hover {
+    transform: rotate(360deg); /* 1 giro */
+  }
+  
+  /* Se quiser girar sem parar no hover, troque o bloco acima por:
+  .semicirculo .elemento:hover { animation: girar 1.2s linear infinite; }
+  @keyframes girar { to { transform: rotate(360deg); } }
+  */
+  
 
 .primeiroParagrafo,
 .segundoParagrafo {
@@ -91,9 +111,7 @@ h4 {
     margin-top: 3.2rem;
 }
 
-.elemento {
-    width: 26rem;
-}
+
 
 .fluxo {
     display: flex;

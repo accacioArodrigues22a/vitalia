@@ -157,3 +157,54 @@ body {
     font-size: larger;
     font-weight: 900;
 }
+
+.modal {
+    display: none; /* começa oculto */
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .modal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btn-exit {
+    background: #c62828;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-exit:hover {
+    background: #b71c1c;
+  }
+  
+  .btn-cancel {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel:hover {
+    background: #bdbdbd;
+  }
+  
