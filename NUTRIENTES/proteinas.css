@@ -62,7 +62,7 @@ h1, h2, h4, ul {
     margin-left: 7.25rem;
 }
 .elemento:hover{
-    rotate: (180degr);
+    transform: rotate(360deg)
 }
 h1 {
     font-family: "Literata", sans-serif;
