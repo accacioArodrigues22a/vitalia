@@ -1,24 +1,30 @@
-
 (function() {
   emailjs.init("eUhe97AbSg4lzh_Q-");
 })();
 
 function enviarFeedback() {
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const feedback = document.getElementById("feedback").value;
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const feedback = document.getElementById("feedback").value.trim();
 
-  emailjs.send("template_ukxb9ts", "service_1vtv36p", {
+  if (!nome || !email || !feedback) {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  emailjs.send("service_1vtv36p", "template_ukxb9ts", {
     nome: nome,
     email: email,
     feedback: feedback
-  }).then(
-    function() {
-      alert("Obrigada pelo seu feedback! 💌 Confira seu e-mail.");
-    },
-    function(error) {
-      alert("Erro ao enviar. Tente novamente.");
-      console.error(error);
-    }
-  );
+  })
+  .then(() => {
+    alert("Obrigada pelo seu feedback! 💌 Confira seu e-mail.");
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("feedback").value = "";
+  })
+  .catch((error) => {
+    console.error("Erro EmailJS:", error);
+    alert("Erro ao enviar: " + JSON.stringify(error));
+  });
 }

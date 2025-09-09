@@ -1,84 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Nutricional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quizPRINCIPAL.css">
+    <script src="./quizPRINCIPALperguntas.js" defer></script>
     <link rel="stylesheet" href="quizPRINCIPALperguntas.css">
+    <title>Quiz Principal Perguntas</title>
 </head>
 <body>
-    <div class="tudo">
-        <div class="container">
-            <!-- Tela de Início -->
-            <div id="tela-inicio" class="tela ativa">
-                <div class="inicio-conteudo">
-                    <h1>Quiz VITALIA</h1>
-                    <p>Teste seus conhecimentos sobre nutrição e alimentação saudável!</p>
-                    <button id="btn-comecar" class="btn-principal">Começar Quiz</button>
-                    <button id="btn-sair" class="btn-secundario">Sair</button>
-                </div>
+    <div class="container">
+        <div id="game" class="justify-centerflex-column">
+            <div class="botao-classe">
+                <a href="./quizPRINCIPAL.html"><button class="botao-sair">SAIR</button></a>
             </div>
-    
-            <!-- Área do Quiz -->
-            <div id="tela-quiz" class="tela">
-                <div class="quiz-cabecalho">
-                    <button id="btn-sair-quiz" class="btn-sair">X</button>
-                    <div class="progresso-container">
-                        <div id="barra-progresso" class="barra-progresso"></div>
-                    </div>
-                    <div id="contador-perguntas" class="contador-perguntas">Pergunta 1 de 10</div>
-                </div>
-    
-                <div class="quiz-conteudo">
-                    <h2 id="pergunta-texto" class="pergunta-texto"></h2>
-                    <div id="opcoes-container" class="opcoes-container"></div>
-                    <button id="btn-proximo" class="btn-proximo" disabled>Próxima Pergunta</button>
-                </div>
+            <div class="firstQuestion">
+                <h2 class="questiontext1"></h2>
             </div>
-    
-            <!-- Tela Final -->
-            <div id="tela-final" class="tela">
-                <div class="final-conteudo">
-                    <h2>Quiz Concluído!</h2>
-                    <div id="pontuacao-final" class="pontuacao-final">Sua pontuação: <span id="pontos">0</span>/10</div>
-                    <div id="mensagem-desempenho" class="mensagem-desempenho"></div>
-                    
-                    <div class="botoes-finais">
-                        <button id="btn-ver-respostas" class="btn-principal">Ver Respostas</button>
-                        <button id="btn-tentar-novamente" class="btn-principal">Tentar Novamente</button>
-                        <button id="btn-voltar-menu" class="btn-secundario">Voltar ao Menu</button>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="next-button">
+                <button class="the-real-button">PRÓXIMA PERGUNTA</button>
+            </div>
+            <br>
+            <div class="barra">
+                <div id="bar">
+                    <div id="inabar">
                     </div>
                 </div>
-            </div>
-    
-            <!-- Tela de Respostas -->
-            <div id="tela-respostas" class="tela">
-                <div class="respostas-conteudo">
-                    <h2>Respostas Corretas</h2>
-                    <p class="respostas-descricao">Confira abaixo as respostas corretas e compare com as suas:</p>
-                    <div id="respostas-container" class="respostas-container"></div>
-                    
-                    <div class="botoes-respostas">
-                        <button id="btn-voltar-final" class="btn-principal">Voltar aos Resultados</button>
-                        <button id="btn-menu-respostas" class="btn-secundario">Menu Principal</button>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Modal de Confirmação -->
-            <div id="modal-confirmacao" class="modal">
-                <div class="modal-conteudo">
-                    <h3>Confirmar Saída</h3>
-                    <p>Tem certeza que deseja sair do quiz?</p>
-                    <div class="modal-botoes">
-                        <button id="modal-confirmar" class="btn-principal">Sim</button>
-                        <button id="modal-cancelar" class="btn-secundario">Cancelar</button>
-                    </div>
-                </div>
+                <h1 id="percent" class="porcentagem">0%</h1>
             </div>
         </div>
     </div>
-
-    <script src="quizPRINCIPALperguntas.js"></script>
 </body>
+<style>
+    #bar {background-color: whitesmoke; width: 50rem; height: 1rem; border-radius: 2rem;}
+    #inabar{background-color: #FBB02D; width: 0%; height: 1rem; border-radius: 2rem;}
+</style>
 </html>
