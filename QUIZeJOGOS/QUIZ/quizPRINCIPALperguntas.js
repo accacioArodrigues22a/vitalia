@@ -117,6 +117,7 @@ startGame();*/
 const question = document.querySelector('.questiontext1');
 const choiceContainers = Array.from(document.getElementsByClassName('choice-container'));
 
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
