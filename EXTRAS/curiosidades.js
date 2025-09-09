@@ -1,5 +1,4 @@
-new Siema()
-
+new Siema
 function mostrarInfo(id) {
     const bloco = document.getElementById(id);
   

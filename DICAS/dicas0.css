@@ -34,24 +34,18 @@ p {
 
 
 h1 {
-
   font-family: "Literata", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 48px;
+  font-size: 3rem;
   margin-top: 10rem;
-  
 }
 
 h2 {
   font-family: "Literata", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 28px;
- 
-
-
-
+  font-size: 1.75rem;
 }
 
 .conteudo{
@@ -63,13 +57,11 @@ h2 {
 p {
   font-family: "Sulphur Point", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   margin-top: 3.2rem;
-
   width: 42rem;
 }
-
 
 .tituloBotoes {
   margin-top: 5rem;
@@ -79,16 +71,14 @@ p {
 .botao {
   background-color: #931F1D;
   color: #FEFAE1;
-  padding: 30px;
+  padding: 1.875rem;
   width: 20rem;
   height: 8rem;
 
   border: none;
-  border-radius: 50px;
+  border-radius: 3.125rem;
 
-
-  font-size: 20px;
-
+  font-size: 1.25rem;
 }
 
 .botao:hover{
@@ -119,11 +109,11 @@ p {
 
 .setaEsquerda {
   transform: rotate(180deg);
-  width: 24px;
+  width: 1.5rem;
 }
 
 .setaDireita {
-  width: 24px;
+  width: 1.5rem;
 }
 
 .botao{
@@ -142,8 +132,8 @@ p {
   }
 }
 
-button:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px #ff000059;
-    transition: 0.5s;
+button:hover {
+  transform: translateY(-0.1875rem);
+  box-shadow: 0 0.5rem 1.25rem #ff000059;
+  transition: 0.5s;
 }

@@ -30,27 +30,27 @@ h1 {
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 h2 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 h4 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 27px;
+    font-size: 1.688rem;
 }
 
 .conteudo p {
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
 }
@@ -92,9 +92,9 @@ h4 {
 
 .setaEsquerda {
     transform: rotate(180deg);
-    width: 24px;
+    width: 1.5rem;
   }
   
 .setaDireita {
-    width: 24px;
+    width: 1.5rem
   }

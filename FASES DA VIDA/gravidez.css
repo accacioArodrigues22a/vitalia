@@ -19,28 +19,27 @@ h1 {
   font-family: "Literata", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3rem; /* 48px */
+  font-size: 3rem; 
 }
-
 h2 {
   font-family: "Literata", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.75rem; /* 28px */
+  font-size: 1.75rem; 
 }
 
 h4 {
   font-family: "Literata", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.6875rem; /* 27px */
+  font-size: 1.6875rem; 
   margin-bottom: 0.938rem;
 }
 
 .conteudo p {
   font-family: "Sulphur Point", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem; 
   font-style: normal;
   margin-top: 3.2rem;
 }
@@ -75,7 +74,7 @@ h4 {
 
   ul {
       list-style-type: square;
-      padding-left: 2.5rem; /* 40px */
+      padding-left: 2.5rem; 
   }
 
   ul li {
@@ -103,7 +102,7 @@ h4 {
 
   h4{
     font-family: "Lato", serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     
   }
 }
@@ -131,12 +130,14 @@ h4 {
 
 .setaEsquerda {
   transform: rotate(180deg);
-  width: 1.5rem; /* 24px */
+  width: 1.5rem; 
 }
 
 .setaDireita {
-  width: 1.5rem; /* 24px */
+  width: 1.5rem; 
 }
+
+
 
 .lembrete{
   margin-top: 3rem;

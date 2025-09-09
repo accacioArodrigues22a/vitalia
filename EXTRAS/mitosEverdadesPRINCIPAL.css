@@ -27,7 +27,7 @@ h1{
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
+    font-size: 3rem;
     margin-top: 10rem;
 
 }
@@ -36,16 +36,14 @@ h2{
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
-    
-
+    font-size: 1.75rem;
 
 }
 
 .pp{
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
     
@@ -72,7 +70,7 @@ h2{
   font-size: 1.2rem;
   height: 10rem;
   transition: 0.4s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
@@ -86,20 +84,22 @@ strong{
 
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 40px; 
+    gap: 2.5rem;
     width: fit-content; 
     margin: 8rem auto; 
     margin-inline: 6rem;
 
     button{
       font-family: "Sulphur Point", sans-serif;
-      font-size: 23px;
+      font-size: 1.4375rem;
     }
 }
 
 .botoes button:hover{
   background-color: #ad7410;
-  
+  transform: scale(1.05);
+  box-shadow: 0 0.3rem 1rem rgba(177, 124, 10, 0.815);
+  transition: 0.4s;
 }
 
 .fechar{

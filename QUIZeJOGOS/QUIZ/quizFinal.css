@@ -12,16 +12,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 2.5rem;
 }
 
 .logo img {
-  height: 50px;
+  height: 3.125rem;
 }
 
 .menu {
   display: flex;
-  gap: 80px;
+  gap: 5rem;
 }
 
 .menu a {
@@ -47,7 +47,7 @@ ul li {
 
 ul li a {
   display: block;
-  padding: 30px 25px;
+  padding: 1.875rem 1.563rem;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -62,7 +62,7 @@ ul li ul.dropdown {
   left: 0;
 
   display: none;
-  min-width: 200px;
+  min-width: 12.5rem;
   z-index: 999;
 }
 
@@ -80,7 +80,7 @@ ul li ul li ul {
   top: 0;
   left: 100%;
   display: none;
-  min-width: 200px;
+  min-width: 12.5rem;
   z-index: 999;
 }
 
@@ -89,7 +89,7 @@ ul li ul li:hover>ul {
 }
 
 ul li ul li a {
-  padding: 12px 15px;
+  padding: 0.75rem 0.938rem;
 }
 
 .nutrientes>a {
@@ -262,6 +262,7 @@ justify-content: center;
 flex-direction: column;
 align-items: center;
 height: 100%;
+margin-top: -5rem;
 }
 
 .flex-center-flex-column {
@@ -302,8 +303,8 @@ h2 {
   text-decoration: none;
   color: white;
   border: none;
-  padding: 10px 80px;
-  border-radius: 8px;
+  padding: 0.625rem 5rem;
+  border-radius: 0.5rem;
   font-weight: 700;
 }
 
@@ -320,8 +321,8 @@ h2 {
   text-decoration: none;
   color: white;
   border: none;
-  padding: 10px 80px;
-  border-radius: 8px;
+  padding: 0.625rem 5rem;
+  border-radius: 0.5rem;
   font-weight: 700;
 }
 

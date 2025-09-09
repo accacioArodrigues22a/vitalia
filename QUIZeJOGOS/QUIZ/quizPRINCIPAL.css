@@ -33,10 +33,10 @@ body {
 
 .botaoIniciar {
     background-color: transparent;
-    border: 1px solid #213807;
+    border: 0.063rem solid #213807;
     color: #213807;
-    padding: 10px 80px;
-    border-radius: 8px;
+    padding: 0.625rem 5rem;
+    border-radius: 0.3rem;
 }
 
 .botaoIniciar:hover {

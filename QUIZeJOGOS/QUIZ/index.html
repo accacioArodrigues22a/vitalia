@@ -29,9 +29,12 @@
     href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap"
     rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+
   <link rel="stylesheet" href="../menu.css">
-  <link rel="stylesheet" href="home.css">
-  <script src="./home.js" defer></script>
+  <link rel="stylesheet" href="../HOME/home.css">
+  <script src="../HOME/home.js" defer></script>
+  <script src="../feedback.js" defer></script>
 
   <link rel="shortcut icon" href="./imgs/1-e6fb7e66.ico">
 
@@ -41,7 +44,7 @@
 <body>
   <header class="navbar">
     <div class="logo">
-      <a href="../HOME/index.html">
+      <a href="index.html">
         <img src="../HOME/imgs/LOGO-VITALIA.png" alt="Logo" />
       </a>
     </div>
@@ -105,7 +108,7 @@
         <div class="inicio">
           <h1>
             VITALIA
-            <img src="./imgs/FOLHA.png" alt="Folha" class="folha-logo">
+            <img src="../HOME/imgs/FOLHA.png" alt="Folha" class="folha-logo">
           </h1>
           <p>
             Bem-vindo à Vitalia! Aqui você encontra conteúdos e dicas sobre nutrição, saúde e bem-estar para te
@@ -133,11 +136,11 @@
         <div class="evento">
           <div class="linha-impar"></div>
           <div class="conteudo teste">3000 a.C.</div>
-          <img class="imagem" src="./imgs/evento1.png" alt="Evento 1" onclick="abrirPopup('popup1')">
+          <img class="imagem" src="../HOME/imgs/evento1.png" alt="Evento 1" onclick="abrirPopup('popup1')">
           <!-- abrirPopup nome da função que eu criei -->
 
           <div class="popup" id="popup1">
-            <span class="fechar" onclick="fecharPopup('popup1')"><img class="img-fechar" src="./imgs/simboloX.png"
+            <span class="fechar" onclick="fecharPopup('popup1')"><img class="img-fechar" src="./HOME/imgs/simboloX.png"
                 alt="símbolo de X"></span>
             <h3>ANTIGUIDADE</h3>
             <p>Povos como egípcios e chineses já relacionavam alimentação com saúde.
@@ -150,11 +153,11 @@
         <div class="evento">
           <div class="linha-par"></div>
           <div class="conteudo teste2">500–1500</div>
-          <img class="imagem" src="./imgs/evento2.png" alt="Evento 2" onclick="abrirPopup('popup2')">
+          <img class="imagem" src="./HOME/imgs/evento2.png" alt="Evento 2" onclick="abrirPopup('popup2')">
 
           <div class="popup" id="popup2">
             <span class="fechar" onclick="fecharPopup('popup2')">
-              <img class="img-fechar" src="./imgs/simboloX.png" alt="símbolo de X"></span>
+              <img class="img-fechar" src="./HOME/imgs/simboloX.png" alt="símbolo de X"></span>
             <h3>IDADE MÉDIA</h3>
             <p>A alimentação era baseada em costumes religiosos e crenças. A nutrição não era vista de forma científica.
             </p>
@@ -165,10 +168,10 @@
         <div class="evento">
           <div class="linha-impar"></div>
           <div class="conteudo teste">Século XIX–XXI</div>
-          <img class="imagem" src="./imgs/evento3.png" alt="Evento 3" onclick="abrirPopup('popup3')">
+          <img class="imagem" src="./HOME/imgs/evento3.png" alt="Evento 3" onclick="abrirPopup('popup3')">
 
           <div class="popup" id="popup3">
-            <span class="fechar" onclick="fecharPopup('popup3')"><img class="img-fechar" src="./imgs/simboloX.png"
+            <span class="fechar" onclick="fecharPopup('popup3')"><img class="img-fechar" src="./HOME/imgs/simboloX.png"
                 alt="símbolo de X"></span>
             <h3>RENASCIMENTO</h3>
             <p>Surgem os primeiros estudos sobre o funcionamento do corpo humano. Início da ligação entre comida e
@@ -181,10 +184,10 @@
         <div class="evento">
           <div class="linha-par"></div>
           <div class="conteudo teste2">Década de 1930</div>
-          <img class="imagem" src="./imgs/evento4.png" alt="Evento 4" onclick="abrirPopup('popup4')">
+          <img class="imagem" src="./HOME/imgs/evento4.png" alt="Evento 4" onclick="abrirPopup('popup4')">
 
           <div class="popup" id="popup4">
-            <span class="fechar" onclick="fecharPopup('popup4')"><img class="img-fechar" src="./imgs/simboloX.png"
+            <span class="fechar" onclick="fecharPopup('popup4')"><img class="img-fechar" src="./HOME/imgs/simboloX.png"
                 alt="símbolo de X"></span>
             <h3>DESCOBERTA DAS VITAMINAS</h3>
             <p>O termo “vitamina” foi criado e começaram os estudos sobre a importância desses compostos para o
@@ -197,11 +200,11 @@
         <div class="evento">
           <div class="linha-impar"></div>
           <div class="conteudo teste">1939–1945</div>
-          <img class="imagem" src="./imgs/evento5.png" alt="Evento 5" onclick="abrirPopup('popup5')">
+          <img class="imagem" src="./HOME/imgs/evento5.png" alt="Evento 5" onclick="abrirPopup('popup5')">
 
           <div class="popup" id="popup5">
             <span class="fechar" onclick="fecharPopup('popup5')">
-              <img class="img-fechar" src="./imgs/simboloX.png" alt="símbolo de X"></span>
+              <img class="img-fechar" src="./HOME/imgs/simboloX.png" alt="símbolo de X"></span>
             <h3>SEGUNDA GUERRA MUNDIAL</h3>
             <p>Avanço no estudo da nutrição para manter soldados saudáveis. Criação de dietas balanceadas em larga
               escala.
@@ -213,11 +216,11 @@
         <div class="evento">
           <div class="linha-par"></div>
           <div class="conteudo teste2">Década de 1990</div>
-          <img class="imagem" src="./imgs/evento6.png" alt="Evento 6" onclick="abrirPopup('popup6')">
+          <img class="imagem" src="./HOME/imgs/evento6.png" alt="Evento 6" onclick="abrirPopup('popup6')">
 
           <div class="popup" id="popup6">
             <span class="fechar" onclick="fecharPopup('popup6')">
-              <img class="img-fechar" src="./imgs/simboloX.png" alt="símbolo de X"></span>
+              <img class="img-fechar" src="./HOME/imgs/simboloX.png" alt="símbolo de X"></span>
             <h3>CRIAÇÃO DAS PIRÂMIDES ALIMENTARES</h3>
             <p>Ferramentas educativas para ensinar como montar uma alimentação equilibrada.
             </p>
@@ -228,11 +231,11 @@
         <div class="evento">
           <div class="linha-impar"></div>
           <div class="conteudo teste">Anos 2000</div>
-          <img class="imagem" src="./imgs/evento7.png" alt="Evento 7" onclick="abrirPopup('popup7')">
+          <img class="imagem" src="./HOME/imgs/evento7.png" alt="Evento 7" onclick="abrirPopup('popup7')">
 
           <div class="popup" id="popup7">
             <span class="fechar" onclick="fecharPopup('popup7')">
-              <img class="img-fechar" src="./imgs/simboloX.png" alt="símbolo de X"></span>
+              <img class="img-fechar" src="./HOME/imgs/simboloX.png" alt="símbolo de X"></span>
             <h3>SURGE A <br> NUTRIÇÃO FUNCIONAL</h3>
             <p> Ideia de que os alimentos podem prevenir doenças e melhorar funções do corpo, além de nutrir.</p>
           </div>
@@ -240,11 +243,11 @@
         </div>
 
         <div class="evento">
-          <img class="imagem" id="ultima-imagem" src="./imgs/evento8.png" alt="Evento 8" onclick="abrirPopup('popup8')">
+          <img class="imagem" id="ultima-imagem" src="./HOME/imgs/evento8.png" alt="Evento 8" onclick="abrirPopup('popup8')">
 
           <div class="popup" id="popup8">
             <span class="fechar" onclick="fecharPopup('popup8')">
-              <img class="img-fechar" src="./imgs/simboloX.png" alt="símbolo de X"></span>
+              <img class="img-fechar" src="./HOME/imgs/simboloX.png" alt="símbolo de X"></span>
             <h3>ATUALIDADE</h3>
             <p>Tendência de alimentação personalizada, dietas baseadas em DNA, foco em sustentabilidade e comida
               natural.</p>
@@ -290,18 +293,22 @@
               <div class="cima">
                 <h4>DEIXE SEU FEEDBACK</h4>
                 <span class="fechar" onclick="fecharPopup('popup-feedback2')">
-                  <img class="fecharPopup" src="./imgs/fechar preto.png" alt="">
+                  <img class="fecharPopup" src="./HOME/imgs/fechar preto.png" alt="">
                 </span>
               </div>
               <div class="corpo">
                 <p>Nome:</p>
-                <input class="dados" type="text">
+                <input class="dados" type="text" id="nome" name="nome" required>
+
                 <p>E-mail:</p>
-                <input class="dados" type="email">
+                <input class="dados" type="email" id="email" name="email" required>
+
                 <p>Digite aqui</p>
-                <textarea class="seuFeedback" placeholder="Digite aqui..."></textarea>
+                <textarea class="seuFeedback" placeholder="Digite aqui..."></textarea id="feedback" name="feedback" required>
+
               </div>
-              <button class="enviar">ENVIAR</button>
+              <button class="enviar" onclick="enviarFeedback()">ENVIAR</button>
+          
           </div>
         </div>
 

@@ -37,7 +37,7 @@ h1{
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
+    font-size: 3rem;
 
 }
 
@@ -45,7 +45,7 @@ h2{
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.75rem;
     
 
 
@@ -57,7 +57,7 @@ h2{
 .conteudo p{
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
     
@@ -66,6 +66,9 @@ h2{
 
 .imagem img{
   width: 25rem;
+  padding: 1rem;
+  background-color: #583303;
+  border-radius: 3rem;
 }
 
 .seta{
@@ -76,7 +79,7 @@ h2{
 
  .titulo {
       max-width: 49rem;
-      max-height: 395px;
+      max-height: 24.688rem;
     
       line-height: 1.1;
  }
@@ -129,9 +132,9 @@ h2{
 
 .setaEsquerda {
   transform: rotate(180deg);
-  width: 24px;
+  width: 1.5rem;
 }
 
 .setaDireita {
-  width: 24px;
+  width: 1.5rem;
 }

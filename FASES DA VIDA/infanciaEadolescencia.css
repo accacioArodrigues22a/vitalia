@@ -6,13 +6,11 @@ body {
 }
 
 
-.conteudo{
-
+.conteudo {
     line-height: 1.1;
     margin: 0 6rem;
     margin-top: 7rem;
     padding: 0;
-
 }
 
 h1,
@@ -23,35 +21,31 @@ ul {
     color: #F5F5F5;
 }
 
-
 h1 {
-
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
-
+    font-size: 3rem;
 }
 
 h2 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 h4 {
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 27px;
-
+    font-size: 1.6875rem;
 }
 
 .conteudo p {
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     margin-top: 3.2rem;
 }
@@ -61,7 +55,6 @@ h4 {
     margin-top: 4rem;
     align-items: center;
     gap: 12rem;
-
 }
 
 .primeiroParagrafo {
@@ -72,13 +65,13 @@ h4 {
     gap: 12rem;
 }
 
-.segundoParagrafo{
+.segundoParagrafo {
     display: flex;
     margin-top: 4rem;
     align-items: center;
     gap: 12rem;
-    
 }
+
 .terceiroParagrafo {
     display: flex;
     margin-top: 4rem;
@@ -87,19 +80,17 @@ h4 {
     gap: 12rem;
 }
 
-.imagem{
+.imagem {
     background-color: #420E0D;
     border-radius: 15%;
     padding: 2rem;
 }
 
-.imagem img{
+.imagem img {
     width: 18rem;
 }
 
-
-
-.fluxo{
+.fluxo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,9 +104,9 @@ h4 {
 
 .setaEsquerda {
     transform: rotate(180deg);
-    width: 24px;
-  }
-  
+    width: 1.5rem;
+}
+
 .setaDireita {
-    width: 24px;
-  }
+    width: 1.5rem;
+}

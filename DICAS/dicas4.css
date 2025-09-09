@@ -27,9 +27,7 @@ body {
     transform: rotate(-90deg);
   z-index: -1;
 }
-.conteudo p, h2,img {
- 
-}
+
 h1, h2, p{
   color: #FEFAE1;
 }
@@ -40,7 +38,7 @@ h1{
     font-family: "Literata", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 48px;
+    font-size: 3rem;
 
 }
 
@@ -48,16 +46,13 @@ h2{
     font-family: "Literata", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 28px;
-    
-
-
+    font-size: 1.75rem;
 }
 
 .conteudo p{
   font-family: "Sulphur Point", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   margin-top: 3.2rem;
   
@@ -72,11 +67,12 @@ h2{
     gap: 2rem;
 }
 
- .titulo {
-      max-width: 55rem;
-      max-height: 395px;
-       line-height: 1.1;
- }
+
+.titulo {
+  max-width: 55rem;
+  max-height: 24.688rem;
+   line-height: 1.1;
+}
 
  .primeiraDica{
     display: flex;
@@ -125,9 +121,9 @@ h2{
 
 .setaEsquerda {
   transform: rotate(180deg);
-  width: 24px;
+  width: 1.5rem;
 }
 
 .setaDireita {
-  width: 24px;
+  width: 1.5rem;
 }

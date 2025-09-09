@@ -97,7 +97,7 @@ p, li {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
 }
 
@@ -138,7 +138,7 @@ p, li {
   p, ul{
     font-family: "Sulphur Point", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-style: normal;
     color: #F5F5F5;
   }
@@ -217,7 +217,7 @@ p, li {
 
   button:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
   }
 
   .obj {
@@ -276,7 +276,7 @@ p, li {
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px) scale(0.95);
+    transform: translateY(1.875rem) scale(0.95);
   }
 
   to {
@@ -333,7 +333,7 @@ p, li {
 }
 
 #modal2 .ponto .pts {
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-size: 1rem;
   opacity: 0.85;
@@ -401,7 +401,7 @@ p, li {
     z-index: 100;
     position: absolute;
   }
-}
+
 
 #modal-objetivo{
   background-color: #931F1D;
