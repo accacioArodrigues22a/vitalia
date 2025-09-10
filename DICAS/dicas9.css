@@ -33,6 +33,7 @@ h1, h2, p{
 }
 
 
+
 h1{
 
     font-family: "Literata", sans-serif;
@@ -52,7 +53,14 @@ h2{
 
 
 }
+.conteudo ul{
+  list-style-type: square;
 
+  ul li {
+    display: list-item;
+}
+
+}
 .conteudo p{
   font-family: "Sulphur Point", sans-serif;
   font-weight: 400;
@@ -64,6 +72,9 @@ h2{
 
 .imagem img{
   width: 25rem;
+  padding: 1rem;
+  background-color: #623f03;
+  border-radius: 3rem;
 }
 
 .seta{

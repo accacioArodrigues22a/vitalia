@@ -1,5 +1,19 @@
 const fade = document.getElementById("fade"); // pega elemnt fade (aquele fundo escuro)
 
+
+  window.addEventListener("load", function() {
+    const splash = document.getElementById("splash");
+    const site = document.getElementById("site-content");
+
+    setTimeout(() => {
+      splash.style.opacity = 0;
+      setTimeout(() => {
+        splash.style.display = "none";
+        site.style.display = "block";
+      }, 500);
+    }, 2000);
+  });
+
 function abrirPopup(id) {
   const popup = document.getElementById(id); // pega popup pelo id
   if (!popup) return; // se n existir, sai d func

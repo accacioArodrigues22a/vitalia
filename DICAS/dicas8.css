@@ -70,6 +70,9 @@ h2{
 
 .imagem img{
   width: 25rem;
+  padding: 1rem;
+  background-color: #1d0000;
+  border-radius: 3rem;
 }
 
 .seta{

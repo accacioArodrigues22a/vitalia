@@ -235,7 +235,6 @@ video{
 .siema{ 
   display: flex; 
   height: 13rem; 
-  overflow-x: auto; 
   scroll-behavior: smooth; 
 } 
 .siema > div { 
@@ -293,4 +292,10 @@ video{
 .imagem:hover{
   transform: scale(1.05);
   transition: 0.4s;
+}
+
+/* CSS do container do slider */
+.siema {
+  overflow: hidden;  /* bloqueia a rolagem horizontal */
+  width: 100%;       /* largura fixa ou desejada */
 }
