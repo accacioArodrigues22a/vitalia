@@ -49,7 +49,7 @@ body {
 /* Logo + nome */
 .logo-text {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   position: relative;
   display: flex;
   align-items: flex-end; /* garante que a folha fique no topo da última letra */
@@ -58,10 +58,14 @@ body {
 
 /* Folhinha acima da última letra */
 .folha-logo1 {
-  height: 4rem; 
-  margin-left: -1.20rem; 
+  height: 2rem; 
+  margin-left: -1rem; 
   transform: translateY(-2.1875rem); /* posiciona a folhinha */
+  
+
 }
+
+
 
 /* Efeito de crescimento da logo */
 @keyframes grow {

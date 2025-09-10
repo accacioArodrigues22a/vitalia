@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // pega todos os botões que a gente vai usar
     const btnComecar = document.getElementById('btn-comecar');
     const btnSair = document.getElementById('btn-sair');
-    // ... e por aí vai
   
     // pega os elementos que vão mudar conforme as perguntas
     const perguntaTexto = document.getElementById('pergunta-texto');
@@ -179,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function tentarNovamente() { comecarQuiz(); }
     function voltarParaFinal() { mostrarTela('final'); }
   
-    // inicia o rolê todo
+    // inicia o programa
     init();
   });
   
