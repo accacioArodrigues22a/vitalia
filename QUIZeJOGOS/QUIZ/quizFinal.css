@@ -311,7 +311,7 @@ h2 {
 .verde:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 #56792E;
-  transition: transform 150ms;
+  transition: 0.4s;
   transform: translateY(-0.1rem);
 }
 
@@ -329,6 +329,6 @@ h2 {
 .vermelho:hover {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 #420E0D;
-  transition: transform 150ms;
+  transition: 0.4s;
   transform: translateY(-0.1rem);
 }

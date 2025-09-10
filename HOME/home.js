@@ -1,45 +1,35 @@
-const fade = document.getElementById("fade"); // pega elemnt fade (aquele fundo escuro)
+const fade = document.getElementById("fade"); // pega o elemento fade (aquele fundo escuro)
 
 
-  window.addEventListener("load", function() {
-    const splash = document.getElementById("splash");
-    const site = document.getElementById("site-content");
 
-    setTimeout(() => {
-      splash.style.opacity = 0;
-      setTimeout(() => {
-        splash.style.display = "none";
-        site.style.display = "block";
-      }, 500);
-    }, 2000);
-  });
-
+// função pra abrir popup
 function abrirPopup(id) {
-  const popup = document.getElementById(id); // pega popup pelo id
-  if (!popup) return; // se n existir, sai d func
-  popup.style.display = "flex"; // mostra popup
-  fade.classList.add("show"); // mostra fundo escuro (fade)
+    const popup = document.getElementById(id); // pega o popup certo pelo id
+    if (!popup) return; // se n existir, nem faz nada
+    popup.style.display = "flex"; // mostra popup
+    fade.classList.add("show"); // mostra o fade atras
 }
 
+// função pra fechar popup
 function fecharPopup(id) {
-  const popup = document.getElementById(id); // pega popup pelo id
-  if (!popup) return; // se n existir, sai d func
-  popup.style.display = "none"; // esconde popup
-  fade.classList.remove("show"); // esconde fundo escuro
+    const popup = document.getElementById(id); // pega popup pelo id
+    if (!popup) return; // se n existir, sai da função
+    popup.style.display = "none"; // esconde popup
+    fade.classList.remove("show"); // esconde o fade
 }
 
+// fecha todos os popups de uma vez
 function fecharTodos() {
-  // fecha td popup
-  document.querySelectorAll(".popup, .popup-feedback").forEach(p => p.style.display = "none");
-  fade.classList.remove("show"); // esconde fade
+    document.querySelectorAll(".popup, .popup-feedback").forEach(p => p.style.display = "none"); // some todos
+    fade.classList.remove("show"); // some o fade tbm
 }
 
-// fecha popup qnd clica no fade
+// fecha popup se clicar no fundo escuro
 fade.addEventListener("click", fecharTodos);
 
-// impede q clique dentro do popup feche ele
+// se clicar dentro do popup, não fecha ele
 document.querySelectorAll(".popup, .popup-feedback").forEach(popup => {
-  popup.addEventListener("click", function(e) {
-    e.stopPropagation(); // pára propagação do clique p fade (n fecha popup)
-  });
+    popup.addEventListener("click", function(e) {
+        e.stopPropagation(); // impede clique do fade de fechar
+    });
 });

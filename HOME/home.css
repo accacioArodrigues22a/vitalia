@@ -46,66 +46,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #12180B;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-/* Texto centralizado */
-#splash h1 {
-  position: relative;       /* para que o span com logo seja posicionado relativamente */
-  font-family: 'Literata', sans-serif;
-  font-size: 3rem;
-  color: #fff;
-  margin: 0;
-  overflow: visible;
-}
-
-/* Span que contém a logo */
-#logo-container {
-  position: absolute;
-  right: 0;                 /* alinha com o último caractere "A" */
-  bottom: 0;                /* ajusta verticalmente */
-}
-
-/* Logo pequena pulando */
-#logo {
-  width: 50px;              /* tamanho da logo */
-  animation: jumpLogo 1s ease forwards;
-}
-
-@keyframes jumpLogo {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-}
-
-/* Digitação do texto */
-#splash h1 {
-  overflow: hidden;
-  border-right: .15em solid #fff;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 2s steps(7) forwards, blink 0.75s step-end 2s;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 7ch; }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: #fff; }
-}
 
 
 .popup h3 {
