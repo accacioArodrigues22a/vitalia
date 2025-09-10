@@ -1,6 +1,20 @@
 const fade = document.getElementById("fade"); // pega o elemento fade (aquele fundo escuro)
 
 
+window.addEventListener('load', () => {
+    const splash = document.getElementById('splash');
+    const mainContent = document.getElementById('main-content');
+  
+    const splashTime = 3000; // 3 segundos
+  
+    setTimeout(() => {
+      splash.classList.add('hidden');
+      mainContent.classList.add('visible');
+    }, splashTime);
+  });
+  
+
+
 
 // função pra abrir popup
 function abrirPopup(id) {

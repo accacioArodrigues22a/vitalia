@@ -119,6 +119,7 @@ const choiceContainers = Array.from(document.getElementsByClassName('choice-cont
 const button = document.querySelector('.the-real-button');
 const indicator = document.getElementById("question-indicator");
 
+let answerHistory = [];
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;

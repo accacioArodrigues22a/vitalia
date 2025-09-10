@@ -21,6 +21,77 @@ body {
 }
 
 
+
+
+
+
+
+/* Splash screen */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* cor de fundo da tela inicial */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#splash.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Logo + nome */
+.logo-text {
+  color: #fff;
+  font-size: 4rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* garante que a folha fique no topo da última letra */
+  animation: grow 1s ease forwards;
+}
+
+/* Folhinha acima da última letra */
+.folha-logo1 {
+  height: 4rem; 
+  margin-left: -1.20rem; 
+  transform: translateY(-2.1875rem); /* posiciona a folhinha */
+}
+
+/* Efeito de crescimento da logo */
+@keyframes grow {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Conteúdo principal escondido no início */
+#main-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#main-content.visible {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .folha-logo {
   height: 1.75rem; 
   margin-left: -1.25rem; 
