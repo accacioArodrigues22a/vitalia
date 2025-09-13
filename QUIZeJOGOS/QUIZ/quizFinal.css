@@ -266,8 +266,8 @@ margin-top: -5rem;
 }
 
 .flex-center-flex-column {
-  width: 30%;
-  height: 45%;
+  width: 45%;
+  height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -190,7 +190,6 @@ const startGame = () => {
   getNewQuestion();
 };
 
-// ... (restante do código igual até getNewQuestion)
 
 const getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {

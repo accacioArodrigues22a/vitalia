@@ -79,7 +79,7 @@ body {
   .choice-container:hover {
     cursor: pointer;
     background-color: #fff8e1;
-    border: 2px solid #FBB02D;
+    border: 0.125 solid #FBB02D;
     transform: translateY(-2px);
   }
   
@@ -104,19 +104,19 @@ body {
   /* Classes de seleção/correção */
   .selected {
     background-color: #fff3cd !important;
-    border: 2px solid #FBB02D !important;
+    border: 0.125 solid #FBB02D !important;
     transform: translateY(-2px);
   }
   
   .correct {
     background-color: #d4edda !important;
-    border: 2px solid #28a745 !important;
+    border: 0.125 solid #28a745 !important;
     color: #155724 !important;
   }
   
   .incorrect {
     background-color: #f8d7da !important;
-    border: 2px solid #dc3545 !important;
+    border: 0.125 solid #dc3545 !important;
     color: #721c24 !important;
   }
   
@@ -130,7 +130,7 @@ body {
   
   .the-real-button {
     background-color: #FBB02D;
-    border: 2px solid #FBB02D;
+    border: 0.125 solid #FBB02D;
     color: white;
     padding: 0.8rem 3.5rem;
     border-radius: 0.5rem;

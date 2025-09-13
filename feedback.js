@@ -1,7 +1,7 @@
 // chave pública do EmailJS
 const PUBLIC_KEY = "67FNIpiHZOcS5nIob";  
 // id do serviço criado no EmailJS
-const SERVICE_ID = "service_1vtv36p";  
+const SERVICE_ID = "service_skijbi6";  
 // id do template de email que vai ser usado
 const TEMPLATE_ID = "template_ukxb9ts"; 
 
