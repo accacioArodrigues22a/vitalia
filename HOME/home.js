@@ -1,45 +1,41 @@
-const fade = document.getElementById("fade"); // pega o elemento fade (aquele fundo escuro)
+const fade = document.getElementById("fade"); // pega o fundo escuro q fica atrás de popups/modais
 
-
+// animação de splash screen
 window.addEventListener('load', () => {
-    const splash = document.getElementById('splash');
-    const mainContent = document.getElementById('main-content');
-  
-    const splashTime = 2000; 
-  
+    const splash = document.getElementById('splash'); // tela inicial
+    const mainContent = document.getElementById('main-content'); // conteúdo principal
+    
+    const splashTime = 2000; // tempo q a splash fica visível (ms)
+    
     setTimeout(() => {
-      splash.classList.add('hidden');
-      mainContent.classList.add('visible');
+      splash.classList.add('hidden'); // some a splash
+      mainContent.classList.add('visible'); // mostra conteúdo
     }, splashTime);
- }
-);
-  
-
-
+});
 
 // função pra abrir popup
 function abrirPopup(id) {
-    const popup = document.getElementById(id); // pega o popup certo pelo id
-    if (!popup) return; // se n existir, nem faz nada
+    const popup = document.getElementById(id); // pega popup certo
+    if (!popup) return; // se n existir, sai
     popup.style.display = "flex"; // mostra popup
-    fade.classList.add("show"); // mostra o fade atras
+    fade.classList.add("show"); // mostra fundo escuro atrás
 }
 
 // função pra fechar popup
 function fecharPopup(id) {
-    const popup = document.getElementById(id); // pega popup pelo id
-    if (!popup) return; // se n existir, sai da função
+    const popup = document.getElementById(id); // pega popup
+    if (!popup) return; // se n existir, sai
     popup.style.display = "none"; // esconde popup
-    fade.classList.remove("show"); // esconde o fade
+    fade.classList.remove("show"); // some fade
 }
 
 // fecha todos os popups de uma vez
 function fecharTodos() {
-    document.querySelectorAll(".popup, .popup-feedback").forEach(p => p.style.display = "none"); // some todos
-    fade.classList.remove("show"); // some o fade tbm
+    document.querySelectorAll(".popup, .popup-feedback").forEach(p => p.style.display = "none"); // some geral
+    fade.classList.remove("show"); // some fade tbm
 }
 
-// fecha popup se clicar no fundo escuro
+// fecha popup se clicar no fade
 fade.addEventListener("click", fecharTodos);
 
 // se clicar dentro do popup, não fecha ele
@@ -49,42 +45,23 @@ document.querySelectorAll(".popup, .popup-feedback").forEach(popup => {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// modais de imagem (apenas clique fora fecha)
+// modais de imagem (só clicar fora fecha)
 document.querySelectorAll("[data-modal]").forEach(el => {
     el.addEventListener("click", () => {
-      const modalId = el.getAttribute("data-modal");
+      const modalId = el.getAttribute("data-modal"); // pega id do modal
       const modal = document.getElementById(modalId);
       if (!modal) return;
   
-      modal.classList.add("show");
-      fade.classList.add("show");
+      modal.classList.add("show"); // mostra modal
+      fade.classList.add("show"); // mostra fade
   
       // fecha modal clicando no fundo
       fade.onclick = () => {
-        modal.classList.remove("show");
-        fade.classList.remove("show");
+        modal.classList.remove("show"); // some modal
+        fade.classList.remove("show"); // some fade
       };
   
-      // impede que clicar dentro do modal feche
+      // impede que clicar dentro do modal feche ele
       modal.onclick = e => e.stopPropagation();
     });
-  });
-  
+});

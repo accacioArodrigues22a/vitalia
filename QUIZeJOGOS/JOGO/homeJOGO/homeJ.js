@@ -1,63 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const fade = document.getElementById("fade");
-    const modals = document.querySelectorAll(".modal");
-    const botoesFechar = document.querySelectorAll(".fechar");
-    const botoesModal = document.querySelectorAll("[data-modal]");
+    const fade = document.getElementById("fade"); // fundo escuro por trás dos modais
+    const modals = document.querySelectorAll(".modal"); // todos os modais
+    const botoesFechar = document.querySelectorAll(".fechar"); // botões de X
+    const botoesModal = document.querySelectorAll("[data-modal]"); // botões q abrem modais
 
-    const SOUNDS_PATH = '../IMGSjogo/';
+    const SOUNDS_PATH = '../IMGSjogo/'; // pasta dos sons
 
-    // Abrir modal
+    // abrir modal
     botoesModal.forEach(btn => {
         btn.addEventListener("click", () => {
-            const modalId = btn.getAttribute("data-modal");
+            const modalId = btn.getAttribute("data-modal"); // pega id do modal q abriu
             const modal = document.getElementById(modalId);
 
-            // Fecha todos os modais, mas mantém o modal principal aberto
+            // fecha todos os modais, menos o principal (modal1)
             modals.forEach(m => {
-                if (m.id !== "modal1") { // id real do modal principal
-                    m.classList.remove("show");
+                if (m.id !== "modal1") {
+                    m.classList.remove("show"); // some os secundários
                 }
             });
 
-            fade.classList.add("show");
-            modal.classList.add("show");
+            fade.classList.add("show"); // mostra fade
+            modal.classList.add("show"); // mostra modal clicado
         });
     });
 
-    // Fechar modal ao clicar no X
+    // fechar modal clicando no X
     botoesFechar.forEach(btn => {
         btn.addEventListener("click", () => {
-            const modalId = btn.getAttribute("data-close");
+            const modalId = btn.getAttribute("data-close"); // pega id do modal a fechar
             const modal = document.getElementById(modalId);
 
-            modal.classList.remove("show");
+            modal.classList.remove("show"); // some modal
 
-            // Se não houver nenhum modal secundário aberto, esconde o fade
+            // se n tiver nenhum outro modal aberto, some fade
             const algumAberto = Array.from(modals).some(m => m.classList.contains("show"));
-            if (!algumAberto) {
-                fade.classList.remove("show");
-            }
+            if (!algumAberto) fade.classList.remove("show");
         });
     });
 
-    // Fechar modal clicando no fundo escuro
+    // fechar modal clicando no fundo escuro
     fade.addEventListener("click", () => {
-        fade.classList.remove("show");
-        modals.forEach(m => m.classList.remove("show"));
+        fade.classList.remove("show"); // some fade
+        modals.forEach(m => m.classList.remove("show")); // some todos os modais
     });
 
-        // Botão Começar com som imediato + leve atraso no redirecionamento
+    // botão começar com som + leve delay pra mudar de página
     const botaoComecar = document.querySelector(".com");
     if (botaoComecar) {
-        const startSound = new Audio("start.mp3"); // ajuste o caminho do som
+        const startSound = new Audio("start.mp3"); // som de start
 
         botaoComecar.addEventListener("click", (e) => {
-            e.preventDefault(); // impede de sair antes do som tocar
+            e.preventDefault(); // impede de mudar de página antes do som tocar
 
             startSound.currentTime = 0;
-            startSound.play().catch(err => console.log("Erro ao tocar som:", err));
+            startSound.play().catch(err => console.log("Erro ao tocar som:", err)); // play do som
 
-            // espera 200ms e muda de página
+            // espera 200ms e vai pra página de seleção
             setTimeout(() => {
                 window.location.href = "../select/select.html";
             }, 200);

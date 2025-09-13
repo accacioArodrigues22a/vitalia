@@ -1,78 +1,71 @@
-// Lista com os perfis de todo mundo do grupo
-// Cada um tem: nome, insta, faculdade, resumo e foto
+// Lista com os perfis do grupo, cada um com nome, insta, faculdade, resumo e foto
 const perfis = {
     andressa: {
         nome: "Andressa Acaccio",
         user: "Instagram: @andressaaxl",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Informações textuais, auxílio no design.",
+        resumo: "Infos textuais, ajuda no design",
         imagem: "../HOME/imgs/andressa.png"
     },
     bruna: {
         nome: "Bruna Silva",
         user: "Instagram: @brunasmqs",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Informações textuais, auxílio no design.",
+        resumo: "Infos textuais, ajuda no design",
         imagem: "../HOME/imgs/bruna.png"
     },
     myria: {
         nome: "Myriã Xavier",
         user: "Instagram: @myria.vi_",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Informações textuais, auxílio no design.",
-        imagem: "../HOME/imgs/userCinza.png"
+        resumo: "Infos textuais, ajuda no design",
+        imagem: "../HOME/imgs/userCinza.png" // ainda sem foto real
     },
     nicolas: {
         nome: "Nicolas de Souza",
-        user: "Sem rede social ativa no momento.",
+        user: "Sem rede social ativa",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Figuras e imagens, busca de textos, auxílio geral",
+        resumo: "Figuras, busca de textos, ajuda geral",
         imagem: "../HOME/imgs/userCinza.png"
     },
     rayssa: {
         nome: "Rayssa Cruz",
         user: "Instagram: @cqzray",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Editora chefe e organizadora geral, ama estética e transforma tudo em arte.",
+        resumo: "Editora chefe, ama estética e transforma td em arte",
         imagem: "../HOME/imgs/rayssa.png"
     }
-  };
-  
-  // Variável que guarda qual perfil tá aberto na tela
-  // Se ninguém estiver aberto, fica null
-  let perfilVisivel = null;
-  
-  // Função que roda quando clica numa foto
-  // "nome" é de quem é o perfil, "imgElement" é a foto clicada
-  function mostrarPerfil(nome, imgElement) {
-    const perfil = perfis[nome]; // pega as infos da pessoa
-    const perfilCaixa = document.getElementById("perfil"); // pega a caixinha que mostra o perfil
-  
-    // Se clicou na mesma pessoa que já tava aberta
+};
+
+// guarda qual perfil tá aberto, null se nenhum
+let perfilVisivel = null;
+
+// função q roda qnd clica numa foto
+// nome = perfil da pessoa, imgElement = foto clicada
+function mostrarPerfil(nome, imgElement) {
+    const perfil = perfis[nome]; // pega infos do perfil
+    const perfilCaixa = document.getElementById("perfil"); // caixinha do perfil
+
+    // se clicou na msm pessoa q já tava aberta
     if (perfilVisivel === nome) {
-        // fecha a caixinha e tira a marcação da foto
-        perfilCaixa.style.display = "none";
-        imgElement.classList.remove('selecionada');
-        perfilVisivel = null; // ninguém tá aberto agora
+        perfilCaixa.style.display = "none"; // fecha a caixinha
+        imgElement.classList.remove('selecionada'); // tira destaque da foto
+        perfilVisivel = null; // agora ninguem aberto
     } else {
-        // se clicou em outra pessoa, mostra as infos dela
+        // se clicou em outra pessoa, mostra infos dela
         document.getElementById("nome").textContent = perfil.nome;
         document.getElementById("user").textContent = perfil.user;
         document.getElementById("faculdade").textContent = perfil.faculdade;
         document.getElementById("resumo").textContent = perfil.resumo;
         perfilCaixa.style.display = "block"; // mostra a caixinha
-  
-        // tira a seleção de todas as fotos
+
+        // tira seleção de todas as fotos
         const todasImagens = document.querySelectorAll('.f');
         todasImagens.forEach(img => {
-            img.classList.remove('selecionada');
+            img.classList.remove('selecionada'); // remove classe de destaque
         });
-  
-        // marca só a foto clicada
-        imgElement.classList.add('selecionada');
-        
-        // atualiza qual perfil tá aberto agora
-        perfilVisivel = nome;
+
+        imgElement.classList.add('selecionada'); // marca só a clicada
+        perfilVisivel = nome; // atualiza qual tá aberto
     }
-  }
-  
+}
