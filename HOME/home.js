@@ -1,11 +1,11 @@
-const fade = document.getElementById("fade"); // pega o fundo escuro q fica atrás de popups/modais
+const fade = document.getElementById("fade"); // pega o fundo escuro q fica atras de popups/modais
 
 // animação de splash screen
 window.addEventListener('load', () => {
     const splash = document.getElementById('splash'); // tela inicial
-    const mainContent = document.getElementById('main-content'); // conteúdo principal
+    const mainContent = document.getElementById('main-content'); // conteudo principal
     
-    const splashTime = 2000; // tempo q a splash fica visível (ms)
+    const splashTime = 2000; // tempo q a splash fica visivel (ms)
     
     setTimeout(() => {
       splash.classList.add('hidden'); // some a splash

@@ -59,13 +59,13 @@ function mostrarPerfil(nome, imgElement) {
         document.getElementById("resumo").textContent = perfil.resumo;
         perfilCaixa.style.display = "block"; // mostra a caixinha
 
-        // tira seleção de todas as fotos
+        // tira selecao de todas as fotos
         const todasImagens = document.querySelectorAll('.f');
         todasImagens.forEach(img => {
             img.classList.remove('selecionada'); // remove classe de destaque
         });
 
         imgElement.classList.add('selecionada'); // marca só a clicada
-        perfilVisivel = nome; // atualiza qual tá aberto
+        perfilVisivel = nome; // atualiza qual ta aberto
     }
 }

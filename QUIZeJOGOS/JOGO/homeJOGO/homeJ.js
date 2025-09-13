@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const fade = document.getElementById("fade"); // fundo escuro por trás dos modais
+    const fade = document.getElementById("fade"); // fundo escuro por tras dos modais
     const modals = document.querySelectorAll(".modal"); // todos os modais
-    const botoesFechar = document.querySelectorAll(".fechar"); // botões de X
-    const botoesModal = document.querySelectorAll("[data-modal]"); // botões q abrem modais
+    const botoesFechar = document.querySelectorAll(".fechar"); // botoes de X
+    const botoesModal = document.querySelectorAll("[data-modal]"); // botoes q abrem modais
 
     const SOUNDS_PATH = '../IMGSjogo/'; // pasta dos sons
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // fecha todos os modais, menos o principal (modal1)
             modals.forEach(m => {
                 if (m.id !== "modal1") {
-                    m.classList.remove("show"); // some os secundários
+                    m.classList.remove("show"); // some os secundarios
                 }
             });
 
@@ -44,18 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
         modals.forEach(m => m.classList.remove("show")); // some todos os modais
     });
 
-    // botão começar com som + leve delay pra mudar de página
+    // botao comecar com som + leve delay pra mudar de pagina
     const botaoComecar = document.querySelector(".com");
     if (botaoComecar) {
         const startSound = new Audio("start.mp3"); // som de start
 
         botaoComecar.addEventListener("click", (e) => {
-            e.preventDefault(); // impede de mudar de página antes do som tocar
+            e.preventDefault(); // impede de mudar de pagina antes do som tocar
 
             startSound.currentTime = 0;
             startSound.play().catch(err => console.log("Erro ao tocar som:", err)); // play do som
 
-            // espera 200ms e vai pra página de seleção
+            // espera 200ms e vai pra pagina de selecao
             setTimeout(() => {
                 window.location.href = "../select/select.html";
             }, 200);

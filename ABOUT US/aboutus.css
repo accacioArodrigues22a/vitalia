@@ -156,18 +156,19 @@ h1{
 .caixa-perfil{
     margin-top: 8rem;
     margin-bottom: 4rem;
-    animation: float 3s ease-in-out infinite;
+    animation: balancar 3s ease-in-out infinite;
   }
   
-@keyframes float {
-  
+@keyframes balancar {
+    /* inicio e fim da animacao: posicao normal */
     0%,
     100% {
-      transform: translateY(0);
+        transform: translateY(0); /* sem deslocamento */
     }
-  
+
+    /* meio da animacao: sobe levemente */
     50% {
-      transform: translateY(-0.625rem);
+        transform: translateY(-0.625rem); /* desloca para cima */
     }
 
 }
