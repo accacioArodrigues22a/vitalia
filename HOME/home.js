@@ -48,3 +48,43 @@ document.querySelectorAll(".popup, .popup-feedback").forEach(popup => {
         e.stopPropagation(); // impede clique do fade de fechar
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// modais de imagem (apenas clique fora fecha)
+document.querySelectorAll("[data-modal]").forEach(el => {
+    el.addEventListener("click", () => {
+      const modalId = el.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (!modal) return;
+  
+      modal.classList.add("show");
+      fade.classList.add("show");
+  
+      // fecha modal clicando no fundo
+      fade.onclick = () => {
+        modal.classList.remove("show");
+        fade.classList.remove("show");
+      };
+  
+      // impede que clicar dentro do modal feche
+      modal.onclick = e => e.stopPropagation();
+    });
+  });
+  
