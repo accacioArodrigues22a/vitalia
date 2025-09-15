@@ -431,6 +431,7 @@ main {
 .agradecimento{
   display: flex;
   flex-direction: column;
+  width: 20.4rem;
 
   ul{
     display: flex;
