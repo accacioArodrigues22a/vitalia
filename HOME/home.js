@@ -65,3 +65,31 @@ document.querySelectorAll("[data-modal]").forEach(el => {
       modal.onclick = e => e.stopPropagation();
     });
 });
+
+const track = document.querySelector('.carousel-track');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function updateCarousel() {
+  const cardWidth = track.querySelector('.card').offsetWidth + 24; // largura + margin
+  track.style.transform = `translateX(${-index * cardWidth}px)`;
+
+  // Desabilita botões se chegar ao início ou fim
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index >= track.children.length - Math.floor(track.parentElement.offsetWidth / cardWidth);
+}
+
+nextBtn.addEventListener('click', () => {
+  index++;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index--;
+  updateCarousel();
+});
+
+window.addEventListener('resize', updateCarousel); // Ajusta se tela mudar
+updateCarousel(); // Inicializa estado dos botões

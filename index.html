@@ -128,6 +128,79 @@
         </div>
       </div>
 
+      <div class="carousel">
+        <div class="carousel-track">
+          <a href="./NUTRIENTES/carboidratos.html" class="card" id="carbo">
+            <h3>Carboidratos</h3>
+            <p>Fonte principal de energia para o corpo.</p>
+          </a>
+          <a href="./NUTRIENTES/fibras.html" class="card">
+            <h3>Fibras</h3>
+            <p>Essenciais para o bom funcionamento intestinal.</p>
+          </a>
+          <a href="./NUTRIENTES/lipidios.html" class="card">
+            <h3>Lipídios</h3>
+            <p>Reservas energéticas e proteção de órgãos.</p>
+          </a>
+          <a href="./NUTRIENTES/hidratacao.html" class="card">
+            <h3>Hidratação</h3>
+            <p>Água é vital para todas as funções do corpo.</p>
+          </a>
+          <a href="./NUTRIENTES/vitaminas.html" class="card">
+            <h3>Vitaminas</h3>
+            <p>Micronutrientes essenciais para metabolismo.</p>
+          </a>
+          <a href="./NUTRIENTES/minerais.html" class="card">
+            <h3>Minerais</h3>
+            <p>Fundamentais para ossos, sangue e equilíbrio.</p>
+          </a>
+          <a href="./NUTRIENTES/proteinas.html" class="card">
+            <h3>Proteínas</h3>
+            <p>Construção e reparação de tecidos.</p>
+          </a>
+          <a href="./FUNCOES/sistemaimunologico.html" class="card">
+            <h3>Sistema Imunológico</h3>
+            <p>Defesa natural do corpo contra doenças.</p>
+          </a>
+          <a href="./FUNCOES/carenciaNutricional.html" class="card">
+            <h3>Carência Nutricional</h3>
+            <p>Deficiências causadas por falta de nutrientes.</p>
+          </a>
+          <a href="./FUNCOES/nutricaoEsaudeMental.html" class="card">
+            <h3>Nutrição & Saúde Mental</h3>
+            <p>A alimentação influencia diretamente o humor.</p>
+          </a>
+          <a href="./FUNCOES/nutrientesEmetabolismo.html" class="card">
+            <h3>Nutrientes & Metabolismo</h3>
+            <p>Conjunto de reações químicas do organismo.</p>
+          </a>
+          <a href="./FASES DA VIDA/infanciaEadolescencia.html" class="card">
+            <h3>Infância & Adolescência</h3>
+            <p>Fases cruciais de desenvolvimento.</p>
+          </a>
+          <a href="./FASES DA VIDA/gravidez.html" class="card">
+            <h3>Gravidez</h3>
+            <p>Exige maior aporte de nutrientes e energia.</p>
+          </a>
+          <a href="./FASES DA VIDA/senilidade.html" class="card">
+            <h3>Senilidade</h3>
+            <p>Alimentação equilibrada garante envelhecimento saudável.</p>
+          </a>
+          <a href="./EXTRAS/mitosEverdadesPRINCIPAL.html" class="card">
+            <h3>Mitos & Verdades</h3>
+            <p>Desvendando crenças populares sobre nutrição.</p>
+          </a>
+          <a href="./EXTRAS/curiosidades.html" class="card" id="curiosidades">
+            <h3>Curiosidades</h3>
+            <p>Fatos interessantes sobre alimentos e saúde.</p>
+          </a>
+        </div>
+      
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      
+
       <main>
         <section class="bloco-caminho">
           <h2 class="titulo">CAMINHO VITAL</h2>
@@ -350,3 +423,23 @@
 </body>
 
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const timelineItems = document.querySelectorAll('.evento');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Ensures it runs only once
+        }
+      });
+    }, {
+      threshold: 0.1 // Adjust as needed
+    });
+
+    timelineItems.forEach(item => {
+      observer.observe(item);
+    });
+  });
+</script>

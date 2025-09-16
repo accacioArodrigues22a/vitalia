@@ -1,303 +1,183 @@
-/*const question = document.querySelector('.questiontext1');
-const choices = Array.from( document.getElementsByClassName('choice-text'));
+// espera o HTML carregar antes de mexer nos elementos
+document.addEventListener('DOMContentLoaded', function() {
 
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-let selectedChoice = ""
-let classToApply = ""
-let correctAnswer = ""
+  // pega todas as telas do quiz (início, perguntas, final, respostas)
+  const telas = { ... }
 
-let questions = [
-    {
-        question: `Qual é a principal função do carboidrato no organismo?`,
-        choice1: "Construção de Tecidos",
-        choice2: "Fornecer Energia Rápida",
-        choice3: "Proteger Contra Doenças",
-        answer: 2
-    },
-    {
-        question: `Qual nutriente ajuda na digestão?`,
-        choice1: "Fibra",
-        choice2: "Sal",
-        choice3: "Proteína",
-        answer: 1
-    },
-    {
-        question: `Qual vitamina é conhecida por ajudar a prevenir gripes e resfriados?`,
-        choice1: "Vitamina K",
-        choice2: "Vitamina B12",
-        choice3: "Vitamina C",
-        answer: 3
-    },
-    {
-        question: `Qual sistema do corpo é fortalecido com boa alimentação?`,
-        choice1: "Sistema Muscular",
-        choice2: "Sistema Visual",
-        choice3: "Sistema Imunológico",
-        answer: 1
-    }
-];
+  // pega todos os botões que a gente vai usar
+  const btnComecar = document.getElementById('btn-comecar');
+  const btnSair = document.getElementById('btn-sair');
 
-const CORRECT_BONUS = 1;
-const MAX_QUESTIONS = 4;
+  // pega os elementos que vão mudar conforme as perguntas
+  const perguntaTexto = document.getElementById('pergunta-texto');
+  const opcoesContainer = document.getElementById('opcoes-container');
+  const barraProgresso = document.getElementById('barra-progresso');
+  const contadorPerguntas = document.getElementById('contador-perguntas');
+  const pontosElemento = document.getElementById('pontos');
+  const mensagemDesempenho = document.getElementById('mensagem-desempenho');
+  const respostasContainer = document.getElementById('respostas-container');
 
-const startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    console.log(availableQuestions);
-    getNewQuestion();
-};
+  // modal de confirmação (tipo "tem certeza que quer sair?")
+  const modal = document.getElementById('modal-confirmacao');
+  const modalConfirmar = document.getElementById('modal-confirmar');
+  const modalCancelar = document.getElementById('modal-cancelar');
 
-const getNewQuestion = () => {
+  // variáveis pra controlar o quiz
+  let perguntaAtual = 0;
+  let pontuacao = 0;
+  let respostasSelecionadas = [];
+  let quizFinalizado = false;
+  let acaoConfirmada = null;
 
-    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("./quizFINAL.html");
-    }
-    questionCounter++;
-    
-    document.querySelector("#inabar").style.width = `${questionCounter * 25}%`
-    document.querySelector("#percent").innerHTML = `${questionCounter * 25}%`
+  // array de perguntas com opções, resposta certa e explicação
+  const perguntas = [ ... ]
 
-    const questionIndex =Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerHTML = `<span class="question-number">${questionCounter}. </span>${currentQuestion.question}`;
-
-    choices.forEach(choice => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    });
-
-    availableQuestions.splice(questionIndex, 1);
-    acceptingAnswers = true;
-};
-
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-
-        if(selectedAnswer == currentQuestion.answer) {
-            classToApply = "correct";
-            score = score + CORRECT_BONUS;
-        } else {
-            classToApply = "incorrect";
-            correctAnswer = document.querySelector(`[data-number='${currentQuestion.answer}']`)
-            correctAnswer.parentElement.classList.add("correct")
-        }
-
-        classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-        selectedChoice.parentElement.classList.add(classToApply);
-
-        console.log(selectedAnswer == currentQuestion.answer);
-        
-    });
-});
-
-const button = document.querySelector('.next-button button');
-button.addEventListener('click', () => {
-    if (selectedChoice && selectedChoice.parentElement) {
-    selectedChoice.parentElement.classList.remove(classToApply);
-    }
-    if (correctAnswer && correctAnswer.parentElement) {
-    correctAnswer.parentElement.classList.remove("correct");
-    }
-    getNewQuestion();
-});
-
-startGame();*/
-
-// pega elementos do DOM
-const question = document.querySelector('.questiontext1');
-const choiceContainers = Array.from(document.getElementsByClassName('choice-container'));
-const button = document.querySelector('.the-real-button');
-const indicator = document.getElementById("question-indicator");
-
-// variáveis de controle do quiz
-let answerHistory = [];
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-let selectedChoice = "";
-let classToApply = "";
-let correctAnswer = "";
-
-// array de perguntas
-let questions = [
-  {
-    question: `Qual é a principal função do carboidrato no organismo?`,
-    choice1: "Construção de Tecidos",
-    choice2: "Fornecer Energia Rápida",
-    choice3: "Proteger Contra Doenças",
-    choice4: "Transporte de Oxigênio",
-    answer: 2
-  },
-  {
-    question: `Qual nutriente ajuda na digestão?`,
-    choice1: "Fibra",
-    choice2: "Sal",
-    choice3: "Proteína",
-    choice4: "Vitamina A",
-    answer: 1
-  },
-  {
-    question: `Qual vitamina é conhecida por ajudar a prevenir gripes e resfriados?`,
-    choice1: "Vitamina K",
-    choice2: "Vitamina B12",
-    choice3: "Vitamina C",
-    choice4: "Vitamina D",
-    answer: 3
-  },
-  {
-    question: `Qual sistema do corpo é fortalecido com boa alimentação?`,
-    choice1: "Sistema Muscular",
-    choice2: "Sistema Visual",
-    choice3: "Sistema Imunológico",
-    choice4: "Sistema Reprodutor",
-    answer: 3
-  },
-  {
-    question: `Qual nutriente é fundamental para a construção dos músculos?`,
-    choice1: "Proteínas",
-    choice2: "Carboidratos",
-    choice3: "Gorduras",
-    choice4: "Vitaminas",
-    answer: 1
-  },
-  {
-    question: `Qual mineral é essencial para ossos fortes?`,
-    choice1: "Ferro",
-    choice2: "Cálcio",
-    choice3: "Potássio",
-    choice4: "Magnésio",
-    answer: 2
+  // função que inicia o quiz, mostra a tela inicial e adiciona os eventos
+  function init() { 
+    mostrarTela('inicio');
+    adicionarEventListeners();
   }
-];
 
-// configurações do quiz
-const CORRECT_BONUS = 1; // pontos por acerto
-const MAX_QUESTIONS = questions.length; // total de perguntas
+  // adiciona todos os event listeners nos botões
+  function adicionarEventListeners() {
+    btnComecar.addEventListener('click', comecarQuiz);
+    btnSair.addEventListener('click', () => mostrarModal('sair'));
+    btnProximo.addEventListener('click', proximaPergunta);
+    btnVerRespostas.addEventListener('click', verRespostas);
+    btnTentarNovamente.addEventListener('click', tentarNovamente);
+    // ... e mais alguns
+    modalConfirmar.addEventListener('click', confirmarAcao);
+    modalCancelar.addEventListener('click', fecharModal);
+  }
 
-// ==================== INICIA O JOGO ====================
-const startGame = () => {
-  questionCounter = 0; // reinicia contador
-  score = 0;           // reinicia pontuação
-  availableQuestions = [...questions]; // copia perguntas disponíveis
-  getNewQuestion();    // carrega primeira pergunta
-};
-
-// pega nova pergunta
-const getNewQuestion = () => {
-    // se não houver mais perguntas, salva pontuação e vai para tela final
-    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-      localStorage.setItem("mostRecentScore", score);
-      return window.location.assign("./quizFINAL.html");
+  // função pra mostrar só uma tela e esconder as outras
+  function mostrarTela(tela) {
+    for (let key in telas) {
+      telas[key].classList.remove('ativa');
     }
-  
-    questionCounter++; // atualiza contador
-    indicator.innerText = `PERGUNTA ${questionCounter} DE ${MAX_QUESTIONS}`; // mostra indicador
+    telas[tela].classList.add('ativa');
+  }
 
-    // atualiza barra de progresso
-    const percentage = ((questionCounter / MAX_QUESTIONS) * 100).toFixed(0);
-    document.querySelector("#inabar").style.width = `${percentage}%`;
-    document.querySelector("#percent").innerHTML = `${percentage}%`;
+  // mostra modal de confirmação
+  function mostrarModal(acao) {
+    acaoConfirmada = acao;
+    modal.classList.add('ativo');
+  }
 
-    // seleciona pergunta aleatória
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerHTML = `<span class="question-number">${questionCounter}. </span>${currentQuestion.question}`;
+  // fecha modal
+  function fecharModal() {
+    modal.classList.remove('ativo');
+    acaoConfirmada = null;
+  }
 
-    // mostra escolhas na tela
-    choiceContainers.forEach((container, index) => {
-      const number = index + 1;
-      const choiceText = container.querySelector('.choice-text');
-      choiceText.innerText = currentQuestion['choice' + number];
-      container.classList.remove("correct", "incorrect", "selected");
-      choiceText.dataset.number = number; // guarda número da escolha
+  // confirma ação do modal (sair, voltar pro menu, etc)
+  function confirmarAcao() {
+    switch(acaoConfirmada) {
+      case 'sair':
+        window.location.href = 'quizPRINCIPAL.html';
+        break;
+      case 'sairQuiz':
+      case 'voltarMenu':
+        mostrarTela('inicio');
+        break;
+    }
+    fecharModal();
+  }
+
+  // começa o quiz de verdade
+  function comecarQuiz() {
+    perguntaAtual = 0;
+    pontuacao = 0;
+    respostasSelecionadas = [];
+    quizFinalizado = false;
+    mostrarTela('quiz');
+    mostrarPergunta();
+  }
+
+  // mostra a pergunta atual e as opções
+  function mostrarPergunta() {
+    const pergunta = perguntas[perguntaAtual];
+    perguntaTexto.textContent = pergunta.pergunta;
+
+    opcoesContainer.innerHTML = '';
+    pergunta.opcoes.forEach((opcao, index) => {
+      const opcaoElemento = document.createElement('div');
+      opcaoElemento.classList.add('opcao');
+      if (respostasSelecionadas[perguntaAtual] === index) opcaoElemento.classList.add('selecionada');
+      opcaoElemento.textContent = opcao;
+      opcaoElemento.dataset.index = index;
+      opcaoElemento.addEventListener('click', selecionarOpcao);
+      opcoesContainer.appendChild(opcaoElemento);
     });
 
-    availableQuestions.splice(questionIndex, 1); // remove pergunta usada
-    acceptingAnswers = true; // permite respostas
-    selectedChoice = "";
-    classToApply = "";
-    correctAnswer = "";
+    // barra de progresso e contador
+    const progresso = ((perguntaAtual + 1) / perguntas.length) * 100;
+    barraProgresso.style.width = `${progresso}%`;
+    contadorPerguntas.textContent = `Pergunta ${perguntaAtual + 1} de ${perguntas.length}`;
 
-    button.innerText = "RESPONDER"; // reset botão
-};
-
-// seleciona escolha
-choiceContainers.forEach(container => {
-  container.addEventListener('click', () => {
-    if (!acceptingAnswers) return; // ignora se não aceitar respostas
-
-    choiceContainers.forEach(c => c.classList.remove("selected")); // remove seleção anterior
-    selectedChoice = container.querySelector('.choice-text'); // define escolha atual
-    container.classList.add("selected"); // marca visualmente
-  });
-});
-
-// botão responder/próxima pergunta
-button.addEventListener('click', () => {
-  if (acceptingAnswers && selectedChoice) {
-    acceptingAnswers = false; // bloqueia novas respostas
-    const selectedAnswer = selectedChoice.dataset['number']; // pega resposta
-    selectedChoice.closest(".choice-container").classList.remove("selected");
-
-    // verifica acerto
-    if (selectedAnswer == currentQuestion.answer) {
-      classToApply = "correct"; // acerto
-      score += CORRECT_BONUS;
-    } else {
-      classToApply = "incorrect"; // erro
-      correctAnswer = document.querySelector(`[data-number='${currentQuestion.answer}']`).closest(".choice-container");
-      correctAnswer.classList.add("correct"); // mostra correta
-    }
-
-    selectedChoice.closest(".choice-container").classList.add(classToApply);
-    button.innerText = "PRÓXIMA PERGUNTA"; // muda texto botão
-
-  } else if (!acceptingAnswers) {
-    // remove classes e vai para próxima pergunta
-    if (selectedChoice) {
-      selectedChoice.closest(".choice-container").classList.remove(classToApply, "selected");
-    }
-    if (correctAnswer) {
-      correctAnswer.classList.remove("correct");
-    }
-    getNewQuestion();
+    btnProximo.disabled = respostasSelecionadas[perguntaAtual] === undefined;
   }
+
+  // quando clica numa opção
+  function selecionarOpcao(e) {
+    const opcoes = opcoesContainer.querySelectorAll('.opcao');
+    opcoes.forEach(opcao => opcao.classList.remove('selecionada'));
+    e.target.classList.add('selecionada');
+    respostasSelecionadas[perguntaAtual] = parseInt(e.target.dataset.index);
+    btnProximo.disabled = false;
+  }
+
+  // vai pra próxima pergunta
+  function proximaPergunta() {
+    if (perguntaAtual === perguntas.length - 1) {
+      finalizarQuiz();
+      return;
+    }
+    perguntaAtual++;
+    mostrarPergunta();
+  }
+
+  // termina o quiz e mostra resultados
+  function finalizarQuiz() {
+    quizFinalizado = true;
+    pontuacao = respostasSelecionadas.reduce((acc, resp, i) => acc + (resp === perguntas[i].respostaCorreta ? 1 : 0), 0);
+
+    pontosElemento.textContent = pontuacao;
+
+    if (pontuacao <= 3) mensagemDesempenho.textContent = "Você pode melhorar! Volte e continue explorando sobre nutrientes!";
+    else if (pontuacao <= 7) mensagemDesempenho.textContent = "Bom trabalho! Seu conhecimento em nutrientes é sólido.";
+    else mensagemDesempenho.textContent = "Excelente! Você é um verdadeiro expert em nutrientes!";
+
+    mostrarTela('final');
+  }
+
+  // mostra todas as respostas e explicações
+  function verRespostas() {
+    respostasContainer.innerHTML = '';
+    perguntas.forEach((pergunta, index) => {
+      const respostaUsuario = respostasSelecionadas[index];
+      const respostaCorreta = pergunta.respostaCorreta;
+      const usuarioAcertou = respostaUsuario === respostaCorreta;
+
+      const respostaItem = document.createElement('div');
+      respostaItem.classList.add('resposta-item');
+      respostaItem.classList.add(usuarioAcertou ? 'correta' : 'incorreta');
+
+      respostaItem.innerHTML = `
+        <div class="resposta-pergunta"><div class="numero-pergunta">${index + 1}</div> <span>${pergunta.pergunta}</span></div>
+        <div class="resposta-correta"><span class="resposta-label">Resposta correta:</span> ${pergunta.opcoes[respostaCorreta]}</div>
+        <div class="resposta-usuario"><span class="resposta-label">Sua resposta:</span> ${respostaUsuario !== undefined ? pergunta.opcoes[respostaUsuario] : 'Não respondida'}</div>
+        <div class="resposta-explicacao" style="margin-top:10px; padding:8px 10px; background:#f8f9fa; border-radius:5px;"><span class="resposta-label">Explicação:</span> ${pergunta.explicacao}</div>
+      `;
+
+      respostasContainer.appendChild(respostaItem);
+    });
+    mostrarTela('respostas');
+  }
+
+  function tentarNovamente() { comecarQuiz(); }
+  function voltarParaFinal() { mostrarTela('final'); }
+
+  // inicia o programa
+  init();
 });
-
-// inicia o jogo
-startGame();
-
-// ==================== MODAL DE SAÍDA ====================
-const exitBtn = document.getElementById("exit-btn");
-const modal = document.getElementById("exit-modal");
-const confirmExit = document.getElementById("confirm-exit");
-const cancelExit = document.getElementById("cancel-exit");
-
-// abre modal ao clicar em sair
-exitBtn.addEventListener("click", () => {
-  modal.classList.remove("hidden");
-});
-
-// cancela saída
-cancelExit.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-// confirma saída e vai para menu principal
-confirmExit.addEventListener("click", () => {
-  window.location.href = "./quizPRINCIPAL.html";
-});
-

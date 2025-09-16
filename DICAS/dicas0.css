@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  background-image: url(../HOME/imgs/fundinho.png);
+  background-image: url(../assets/1000219473.png);
 }
 
 
@@ -23,12 +23,13 @@ body {
   right: 0;
   transform: rotate(-90deg);
   z-index: -1;
+  margin-top: -5rem;
 }
 
 h1,
 h2,
 p {
-  color: #000;
+  color: #fff;
 }
 
 

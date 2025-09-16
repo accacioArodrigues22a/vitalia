@@ -8,6 +8,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
+
+  /* Fixar no topo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo img {
@@ -209,7 +216,7 @@ ul li ul li a {
 }
 
 .menu li a.ativo1 {
-  color: #A1CF6B;
+  color: #;
 }
 
 
