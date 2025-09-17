@@ -307,3 +307,6 @@ strong {
     transform: scale(1.05);
     transition: 0.4s;
 }
+.texto h1{
+    margin-top: 12rem;
+}

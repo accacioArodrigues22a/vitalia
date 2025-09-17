@@ -1,5 +1,13 @@
-body{
-  background: url(../HOME/imgs/fundinho-dicas.png), linear-gradient(to bottom, rgb(98, 56, 0) 50%, rgb(85, 1, 1) 100%);
+body {
+  background: url(../HOME/imgs/dicas.png) no-repeat left center ;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #250000;
+
+  margin: 5rem 6rem;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .tudo {
@@ -19,7 +27,7 @@ body{
   height: 0;
   border-left: 35rem solid transparent;
   border-bottom: 35rem solid #5a1211;
-  position: absolute;
+  position: absolute;rgb(61, 17, 90)
   top: 0;
   right: 0;
   transform: rotate(-90deg);
@@ -67,7 +75,7 @@ h2{
 .imagem img{
   width: 25rem;
   padding: 1rem;
-  background-color: #583303;
+  background-color: #020c14;
   border-radius: 3rem;
 }
 

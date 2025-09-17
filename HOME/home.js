@@ -93,3 +93,4 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', updateCarousel); // Ajusta se tela mudar
 updateCarousel(); // Inicializa estado dos botões
+

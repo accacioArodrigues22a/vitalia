@@ -1,5 +1,5 @@
 body {
-  background-image: url(../EXTRAS/IMGSextras/fundinho-curiosidades.png);
+  background-image: url(../assets/dicasfundo.png);
   background-color: #e2f0d1;
 }
 
@@ -33,7 +33,7 @@ body {
 h1,
 h2,
 p {
-  color: #000;
+  color: #fff;
 }
 
 h1 {

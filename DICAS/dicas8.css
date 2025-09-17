@@ -1,5 +1,5 @@
 body{
-  background: url(../HOME/imgs/fundinho-dicas.png), linear-gradient(to bottom, rgb(39, 0, 0) 50%, rgb(104, 36, 36) 100%);
+  background: url(../HOME/imgs/dicas.png), linear-gradient(to bottom, rgb(39, 0, 0) 50%, rgb(104, 36, 36) 100%);
   overflow-x: hidden;
 }
 
@@ -71,7 +71,7 @@ h2{
 .imagem img{
   width: 25rem;
   padding: 1rem;
-  background-color: #1d0000;
+  background-color: #020c14;
   border-radius: 3rem;
 }
 

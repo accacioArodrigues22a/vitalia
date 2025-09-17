@@ -25,7 +25,11 @@ body {
   cursor: pointer;
 }
 
-
+.marcal,
+.bnones{
+  width: 20rem;
+  border-radius: 3rem;
+}
 
 
 /* Splash screen */
@@ -102,7 +106,7 @@ body {
 }
 
 .inicio {
-  margin-top: 20rem;
+  margin-top: 25rem;
   margin-bottom: 5rem;
 }
 
@@ -315,6 +319,9 @@ main {
   justify-content: center;
   margin: 4rem 0;
   flex-direction: row-reverse;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .evento:nth-child(even) {
@@ -462,24 +469,11 @@ main {
 
 .imagem{
   cursor: pointer;
-  transition: opacity 1s ease, transform 1s ease;
 }
 
-.imagem.visible {
+.evento.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .fechar{
@@ -495,7 +489,7 @@ main {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
-  z-index: 900;
+  z-index: 1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -659,7 +653,7 @@ main {
   min-width: 16.25rem;
   margin: 0 0.75rem;
   padding: 1.5625rem;
-  background: rgb(162, 168, 125);
+  background: rgb(96, 104, 48);
   border-radius: 1.125rem;
   text-decoration: none;
   color: #333;
@@ -682,7 +676,7 @@ main {
 .card h3 {
   font-size: 1.4rem;
   margin-bottom: 0.625rem;
-  color: #112e00;
+  color: #15220d;
 }
 
 .card p {
@@ -742,3 +736,4 @@ button.next {
 #curiosidades{
   margin-right: -10rem;
 }
+
