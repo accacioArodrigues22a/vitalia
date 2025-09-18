@@ -4,35 +4,35 @@ const perfis = {
         nome: "Andressa Acaccio",
         user: "Instagram: @andressaaxl",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Infos textuais, ajuda no design",
+        resumo: "Infos textuais, ajuda no design e envolvimento em todas as animações",
         imagem: "../HOME/imgs/andressa.png"
     },
     bruna: {
         nome: "Bruna Silva",
         user: "Instagram: @brunasmqs",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Infos textuais, ajuda no design",
+        resumo: "Infos textuais, ajuda no design e desenvolvedora da API no feedback",
         imagem: "../HOME/imgs/bruna.png"
     },
     myria: {
         nome: "Myriã Xavier",
         user: "Instagram: @myria.vi_",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Infos textuais, ajuda no design",
+        resumo: "Infos textuais, ajuda no design e envolvimento em todas as ligações",
         imagem: "../HOME/imgs/userCinza.png" // ainda sem foto real
     },
     nicolas: {
         nome: "Nicolas de Souza",
         user: "Sem rede social ativa",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Figuras, busca de textos, ajuda geral",
+        resumo: "Figuras, busca de textos, ajuda geral e desenvolvidor do quiz",
         imagem: "../HOME/imgs/userCinza.png"
     },
     rayssa: {
         nome: "Rayssa Cruz",
         user: "Instagram: @cqzray",
         faculdade: "Estuda no: UNASP-SP",
-        resumo: "Editora chefe, ama estética e transforma td em arte",
+        resumo: "Editora chefe, ama estética e desenvolvidora do jogo",
         imagem: "../HOME/imgs/rayssa.png"
     }
 };

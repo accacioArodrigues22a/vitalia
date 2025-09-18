@@ -20,6 +20,21 @@ body {
   overflow: hidden; /* força qualquer elemento rotacionado a não criar scroll ou linhas extras */
 }
 
+.titulo-cards {
+  width: 100%;              /* ocupa toda a largura */
+  text-align: center;       /* centraliza o texto */
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  background: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+
+
 .marcio,
 .benones{
   cursor: pointer;
@@ -85,8 +100,6 @@ body {
 #main-content.visible {
   opacity: 1;
 }
-
-
 
 
 
@@ -178,8 +191,8 @@ body {
     font-family: 'Sulphur Point', serif;
   }
   .fecharPopup{
-    width: 1.20rem; 
-    height: 1.32em; 
+    width: 1.5rem; 
+    height: 1em; 
     margin-bottom: 2rem;
   }
 
@@ -319,9 +332,6 @@ main {
   justify-content: center;
   margin: 4rem 0;
   flex-direction: row-reverse;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
 }
 
 .evento:nth-child(even) {
@@ -469,11 +479,6 @@ main {
 
 .imagem{
   cursor: pointer;
-}
-
-.evento.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .fechar{
@@ -631,9 +636,16 @@ main {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
-  z-index: 999;
+  z-index: 500;
+  opacity: 1;
 }
 
+.popup,
+.popup-feedback,
+.modal {
+  position: fixed !important; /* garante que não dependam do pai */
+  z-index: 1000 !important;   /* sempre acima do fade */
+}
 .carousel {
   position: relative;
   width: 90%;
@@ -718,7 +730,7 @@ button.prev {
 }
 
 button.next {
-  right: 0.625rem;
+  right: 0.675rem;
 }
 
 .prev{
@@ -736,4 +748,85 @@ button.next {
 #curiosidades{
   margin-right: -10rem;
 }
+
+.btnAbrir {
+  padding: 10px 20px;
+  background-color: rgb(96, 104, 48);
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.popup-faq {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: rgb(96, 104, 48);
+  margin: 5% auto;
+  padding: 20px;
+  width: 350px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.fecharPopup {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.arraste {
+  display: flex;
+  justify-content: center;
+}
+
+.arraste img {
+  width: 4.5rem;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.arraste img.oculto {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.9);
+  pointer-events: none;
+}
+
+
+/* Animação da timeline */
+.evento {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.evento.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 

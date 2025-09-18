@@ -19,7 +19,8 @@ body {
 /* ====== CARDS INDIVIDUAIS (já tinha no seu código, só melhorei) ===== */
 .jogos div {
   background: #efffed;
-  padding: 1.5rem;
+  padding: 1rem;
+  margin-top: -3rem;
   border-radius: 1rem;
   transition: transform 0.4s;
   box-shadow: 0 0 15px rgba(0,0,0,0.15);

@@ -284,11 +284,12 @@ video{
     font-family: "Lato", sans-serif;
     font-size: 0.8rem;
     font-weight: 800;
-    color: #000;
+    color: #fff;
   }
 
   img{
-    width: 2.5rem;
+    width: 1.5rem;
+    transform: rotate(180deg);
     margin-bottom: -2rem;
   }
 }
@@ -313,6 +314,36 @@ video{
     margin-right: 2rem;
   }
 }
+
+/* Estilização do container principal dos vídeos */
+.siema {
+  padding: 2rem 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Estilização de cada slide (cada div que contém o iframe) */
+.siema > div {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilização do iframe (o vídeo em si) */
+.siema iframe {
+  width: 333.3px;
+  height: 210px;
+  border: none;
+  border-radius: 16px; /* Bordas arredondadas */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transition: all 0.3s ease-in-out; /* Transição suave */
+  background: #000; /* Fundo preto enquanto carrega */
+}
+
+/* Efeito HOVER: aumenta levemente e sombra mais forte */
+.siema iframe:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgb(129, 0, 0);}
 
 .imagem{
   cursor: pointer;

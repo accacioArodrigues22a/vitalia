@@ -1,3 +1,6 @@
+
+
+
 const fade = document.getElementById("fade"); // pega o fundo escuro q fica atras de popups/modais
 
 // animação de splash screen
@@ -93,4 +96,78 @@ prevBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', updateCarousel); // Ajusta se tela mudar
 updateCarousel(); // Inicializa estado dos botões
+
+
+
+
+
+/*document.getElementById('btnAbrirFAQ').addEventListener('click', () => {
+  document.getElementById('popupFAQ').style.display = 'block';
+});
+
+document.getElementById('fecharFAQ').addEventListener('click', () => {
+  document.getElementById('popupFAQ').style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  const popup = document.getElementById('popupFAQ');
+  if (e.target === popup) {
+    popup.style.display = 'none';
+  }
+});*/
+
+
+// animação da linha do tempo (timeline)
+document.addEventListener("DOMContentLoaded", () => {
+  const eventos = document.querySelectorAll(".evento");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // garante que anima só 1x
+      }
+    });
+  }, { threshold: 0.2 }); // ativa quando 20% visível
+
+  eventos.forEach(evento => observer.observe(evento));
+});
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("title");
+    const text = el.textContent.trim();
+    el.innerHTML = text
+      .split("")
+      .map((ch, i) => 
+        `<span style="animation-delay:${i * 0.1}s">${ch === " " ? "&nbsp;" : ch}</span>`
+      )
+      .join("");
+  });
+
+  window.addEventListener("scroll", function () {
+    const img = document.querySelector(".arraste img");
+  
+    // valor bem pequeno em rem (ex.: 0.5rem)
+    const limiteEmRem = 0.5;
+    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const limitePx = limiteEmRem * rootFontSize;
+  
+    if (window.scrollY > limitePx) {
+      img.classList.add("oculto");
+    } else {
+      img.classList.remove("oculto");
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("title");
+    const text = el.textContent.trim();
+    el.innerHTML = text
+      .split("")
+      .map((ch, i) => 
+        `<span style="animation-delay:${i * 0.1}s">${ch === " " ? "&nbsp;" : ch}</span>`
+      )
+      .join("");
+  });
 
