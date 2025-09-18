@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function confirmarAcao() {
       switch(acaoConfirmada) {
           case 'sair':
-              window.location.href = './quizPRINCIPAL.html';
+              window.location.href = './quizEjogos.html';
               break;
           case 'sairQuiz':
               mostrarTela('inicio');

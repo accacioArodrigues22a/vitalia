@@ -5,7 +5,11 @@ body {
 
     overflow-x: hidden;
 }
-
+.imagem{
+    padding: 2rem;
+    background-color: #390909;
+    border-radius: 3rem;
+}
 
 .conteudo{
 
@@ -14,6 +18,12 @@ body {
     margin-top: 7rem;
     padding: 0;
 
+}
+
+.primeiroParagrafo,
+.segundoParagrafo,
+.conteudo{
+    justify-content: space-between;
 }
 
 

@@ -13,7 +13,13 @@ body {
     padding: 0;
 
 }
+.titulo{
+    margin-top: 15rem;
+}
 
+#comeco{
+    margin-top: 8rem;
+}
 
 .fluxo p {
     font-family: "Lato", sans-serif;

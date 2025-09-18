@@ -64,6 +64,9 @@ h4 {
     text-align: right;
     gap: 12rem;
 }
+.titulo{
+    margin-top: 15rem;
+}
 
 .primeiroParagrafo {
     text-align: left;
