@@ -5,6 +5,13 @@ body {
     overflow-x: hidden;
 }
 
+.titulo{
+    margin-top: 15rem;
+}
+
+#comeco{
+    margin-top: 8rem;
+}
 
 .conteudo{
 
