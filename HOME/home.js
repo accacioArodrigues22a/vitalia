@@ -117,33 +117,7 @@ window.addEventListener('click', (e) => {
 });*/
 
 
-// animação da linha do tempo (timeline)
-document.addEventListener("DOMContentLoaded", () => {
-  const eventos = document.querySelectorAll(".evento");
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target); // garante que anima só 1x
-      }
-    });
-  }, { threshold: 0.2 }); // ativa quando 20% visível
-
-  eventos.forEach(evento => observer.observe(evento));
-});
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const el = document.getElementById("title");
-    const text = el.textContent.trim();
-    el.innerHTML = text
-      .split("")
-      .map((ch, i) => 
-        `<span style="animation-delay:${i * 0.1}s">${ch === " " ? "&nbsp;" : ch}</span>`
-      )
-      .join("");
-  });
 
   window.addEventListener("scroll", function () {
     const img = document.querySelector(".arraste img");
@@ -159,4 +133,18 @@ document.addEventListener("DOMContentLoaded", () => {
       img.classList.remove("oculto");
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("title");
+    if (el) {
+      const text = el.textContent.trim();
+      el.innerHTML = text
+        .split("")
+        .map((ch, i) =>
+          `<span style="animation-delay:${i * 0.1}s">${ch === " " ? "&nbsp;" : ch}</span>`
+        )
+        .join("");
+    }
+  });
+  
   

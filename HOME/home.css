@@ -24,7 +24,7 @@ body {
   width: 100%;              /* ocupa toda a largura */
   text-align: center;       /* centraliza o texto */
   font-size: 2rem;
-  font-family: 'Literata', serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #ffffff;
   background: none;
@@ -148,9 +148,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  opacity: 1 !important;
-  transform: none !important;
 }
 
 
@@ -829,21 +826,6 @@ button.next {
   pointer-events: none;
 }
 
-.evento > *:not(.popup) {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.8s ease-out;
-}
-
-.evento.show > *:not(.popup) {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.popup {
-  opacity: 1 !important;
-  transform: none !important;
-}
 
 
 
