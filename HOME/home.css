@@ -24,7 +24,7 @@ body {
   width: 100%;              /* ocupa toda a largura */
   text-align: center;       /* centraliza o texto */
   font-size: 2rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'Literata', serif;
   font-weight: 600;
   color: #ffffff;
   background: none;
@@ -33,7 +33,18 @@ body {
   margin-bottom: 3rem;
 }
 
+.titulo-cards span {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
 
+@keyframes wave {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-4px) rotate(-2deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(4px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
 
 .marcio,
 .benones{
@@ -137,6 +148,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 
@@ -815,18 +829,22 @@ button.next {
   pointer-events: none;
 }
 
-
-/* Animação da timeline */
-.evento {
+.evento > *:not(.popup) {
   opacity: 0;
   transform: translateY(60px);
   transition: all 0.8s ease-out;
 }
 
-.evento.show {
+.evento.show > *:not(.popup) {
   opacity: 1;
   transform: translateY(0);
 }
+
+.popup {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 
 
 

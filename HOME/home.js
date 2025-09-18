@@ -159,15 +159,4 @@ document.addEventListener("DOMContentLoaded", () => {
       img.classList.remove("oculto");
     }
   });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const el = document.getElementById("title");
-    const text = el.textContent.trim();
-    el.innerHTML = text
-      .split("")
-      .map((ch, i) => 
-        `<span style="animation-delay:${i * 0.1}s">${ch === " " ? "&nbsp;" : ch}</span>`
-      )
-      .join("");
-  });
-
+  
