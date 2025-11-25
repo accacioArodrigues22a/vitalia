@@ -1,5 +1,6 @@
 body {
   background-image: url(../../assets/fundoQUIZfinal.jpeg);
+<<<<<<< HEAD
   background-size: cover; /* Garante que a imagem cubra tudo */
   background-position: center;
   padding: 0;
@@ -10,15 +11,27 @@ body {
 }
 
 /* ================= MENU (NAVBAR) ================= */
+=======
+
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 .navbar {
   background-color: #12180B;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
+<<<<<<< HEAD
   height: 5rem; /* Altura fixa para não empurrar o resto */
   position: relative;
   z-index: 10;
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }
 
 .logo img {
@@ -37,6 +50,7 @@ body {
   transition: color 0.3s;
 }
 
+<<<<<<< HEAD
 /* Estilos do Dropdown (Mantidos do seu original) */
 ul { list-style: none; margin: 0; padding: 0; }
 ul li { display: inline-block; position: relative; }
@@ -76,10 +90,250 @@ ul li ul li a { padding: 0.75rem 0.938rem; }
   min-width: 350px; /* Garante que não fique muito fino em telas pequenas */
   height: auto;     /* Altura automática para caber o conteúdo */
   min-height: 60%;
+=======
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 1.875rem 1.563rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+
+
+ul li ul.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: none;
+  min-width: 12.5rem;
+  z-index: 999;
+}
+
+ul li ul.dropdown li {
+  display: block;
+}
+
+
+ul li:hover>ul.dropdown {
+  display: block;
+}
+
+ul li ul li ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  min-width: 12.5rem;
+  z-index: 999;
+}
+
+ul li ul li:hover>ul {
+  display: block;
+}
+
+ul li ul li a {
+  padding: 0.75rem 0.938rem;
+}
+
+.nutrientes>a {
+  background-color: rgba(40, 54, 25, 0.6);
+  color: white;
+}
+
+.nutrientes>a:hover {
+  background-color: rgba(40, 54, 25, 0.6);
+
+}
+
+.nutrientes>ul {
+  background-color: rgba(40, 54, 25, 0.6);
+}
+
+.nutrientes>ul li a {
+  color: white;
+}
+
+.nutrientes>ul li a:hover {
+  background-color: rgba(40, 54, 25, 0.2);
+}
+
+
+
+
+
+.funcoes>a {
+  background-color: rgba(66, 14, 13, 0.6);
+  color: white;
+}
+
+.funcoes>a:hover {
+  background-color: rgba(66, 14, 13, 0.6);
+
+}
+
+.funcoes>ul {
+  background-color: rgba(66, 14, 13, 0.6);
+}
+
+.funcoes>ul li a {
+  color: white;
+}
+
+.funcoes>ul li a:hover {
+  background-color: rgba(66, 14, 13, 0.2);
+}
+
+
+
+
+
+
+.fases>a {
+  background-color: rgba(161, 207, 107, 0.6);
+  color: white;
+}
+
+.fases>a:hover {
+  background-color: rgba(161, 207, 107, 0.6);
+
+}
+
+.fases>ul {
+  background-color: rgba(161, 207, 107, 0.6);
+}
+
+.fases>ul li a {
+  color: white;
+}
+
+.fases>ul li a:hover {
+  background-color: rgba(161, 207, 107, 0.2);
+}
+
+
+
+.extras>a {
+  background-color: rgba(251, 176, 45, 0.6);
+  color: white;
+}
+
+.extras>a:hover {
+  background-color: rgba(251, 176, 45, 0.6);
+
+}
+
+.extras>ul {
+  background-color: rgba(251, 176, 45, 0.6);
+}
+
+.extras>ul li a {
+  color: white;
+}
+
+.extras>ul li a:hover {
+  background-color: rgba(251, 176, 45, 0.2);
+}
+
+
+.menu>ul>li:nth-child(1)>a:hover {
+  color: #A1CF6B;
+  font-size: 1.02rem;
+  transition: 0.4s;
+}
+
+.menu>ul>li:nth-child(2)>a:hover {
+  color: #FBB02D;
+  font-size: 1.02rem;
+  transition: 0.4s;
+}
+
+.menu>ul>li:nth-child(3)>a:hover {
+  color: #FBB02D;
+  font-size: 1.02rem;
+  transition: 0.4s;
+
+}
+
+.menu>ul>li:nth-child(4)>a:hover {
+  color: #FBB02D;
+  font-size: 1.02rem;
+  transition: 0.4s;
+}
+
+.menu li a.ativo {
+  color: #FBB02D;
+  font-size: 1.02rem;
+  transition: 0.4s;
+}
+
+.menu li a.ativo1 {
+  color: #A1CF6B;
+  font-size: 1.02rem;
+  transition: 0.4s;
+}
+
+
+
+
+.fluxo{
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+
+  div {
+
+      p{
+          color: #F5F5F5;
+          font-weight: bold;
+          font-family: 'Lato', sans-serif;
+      }
+  }
+}
+
+.setaEsquerda {
+  margin-left: 6rem;
+}
+
+
+.setaDireita {
+
+  margin-right: 6rem;
+}
+
+.container {
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+height: 100%;
+margin-top: -5rem;
+}
+
+.flex-center-flex-column {
+  width: 45%;
+  height: 60%;
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+<<<<<<< HEAD
   border-radius: 2rem;
   background-color: #FBB02D;
   color: white;
@@ -91,12 +345,32 @@ ul li ul li a { padding: 0.75rem 0.938rem; }
 }
 
 /* Textos */
+=======
+  border-radius:2rem;
+  background-color: #FBB02D;
+  color: white;
+  gap: 1rem;
+}
+
+
+h1 {
+  font-family: "Literata", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Literata", sans-serif;
+  font-weight: lighter;
+}
+
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 .texto {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
+<<<<<<< HEAD
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -161,4 +435,42 @@ h2 {
 /* User Info no Menu */
 .user-info {
   margin-left: 2rem;
+=======
+}
+
+.verde {
+  font-family: "Lato", sans-serif;
+  background-color: #56792E;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0.625rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.verde:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #56792E;
+  transition: 0.4s;
+  transform: translateY(-0.1rem);
+}
+
+.vermelho {
+  font-family: "Lato", sans-serif;
+  background-color: #420E0D;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0.625rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.vermelho:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 #420E0D;
+  transition: 0.4s;
+  transform: translateY(-0.1rem);
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Recupera a pontuação salva no arquivo de perguntas
     const mostRecentScore = localStorage.getItem("mostRecentScore");
@@ -44,3 +45,13 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
         console.error("Erro ao salvar pontuação:", error);
     }
 }
+=======
+// pega a pontuação mais recente q tá salva no localStorage
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+// pega o elemento do HTML que mostra a pontuação final
+const finalScore = document.getElementById('finalScore');
+
+// mostra no HTML tipo "X de 6"
+finalScore.innerText = `${mostRecentScore} de 6`;
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e

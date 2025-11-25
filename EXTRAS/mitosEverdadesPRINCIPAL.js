@@ -32,4 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".modal.show").forEach(m => m.classList.remove("show")); // fecha todos
     fade.classList.remove("show"); // esconde o fade tbm
   });
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e

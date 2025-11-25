@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if (!sessionStorage.getItem("usuarioId")) {
     alert("Ops! Você precisa fazer login para jogar e salvar sua pontuação.");
     
@@ -6,6 +7,8 @@ if (!sessionStorage.getItem("usuarioId")) {
     throw new Error("Acesso negado: Usuário não logado.");
 }
 
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 // ==================== CONFIGURAÇÕES GLOBAIS ====================
 const IMGS_PATH = './IMGSjogo/'; // Caminho p/ imagens
 const SOUNDS_PATH = './IMGSjogo/'; // Caminho p/ sons
@@ -325,7 +328,12 @@ function toggleMute() {
 
 // Reinicia o jogo
 function restartGame() {
+<<<<<<< HEAD
   localStorage.setItem("lives", "3");
+=======
+  localStorage.setItem("score", player.score.toString());
+  localStorage.setItem("lives", player.lives.toString());
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   window.location.reload();
 }
 
@@ -376,6 +384,11 @@ function showGameOver() {
     GameOverSound.currentTime = 0;
     GameOverSound.play().catch(e => console.log("Erro ao reproduzir som"));
   }
+<<<<<<< HEAD
+=======
+
+  localStorage.removeItem("accumulatedScore");
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }
 
 // Mostra seleção de nível quando dá gameover
@@ -386,8 +399,11 @@ levelSelectFromGameOver.addEventListener("click", showLevelSelect)
 function showLevelComplete() {
   levelScore.textContent = player.score;
   levelCompleteScreen.style.display = 'flex';
+<<<<<<< HEAD
 
   localStorage.setItem("accumulatedScore", player.score.toString());
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }
 
 
@@ -629,6 +645,7 @@ function gameLoop() {
 
   // Continua o loop
   requestAnimationFrame(gameLoop);
+<<<<<<< HEAD
 }
 
 // ==================== CONEXÃO COM O BANCO ====================
@@ -661,4 +678,6 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
     } catch (error) {
         console.error("Erro ao conectar com o servidor:", error);
     }
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }

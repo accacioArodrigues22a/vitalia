@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ==================== GUARDA-COSTAS (SEGURANÇA) ====================
 // Verifica se o usuário está logado. Se não estiver, manda pro Login.
 if (!sessionStorage.getItem("usuarioId")) {
@@ -12,6 +13,8 @@ if (!sessionStorage.getItem("usuarioId")) {
 }
 // ===================================================================
 
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 // ==================== CONFIGURAÇÕES GLOBAIS ====================
 const IMGS_PATH = './IMGSjogo/'; // Caminho p/ imagens
 const SOUNDS_PATH = './IMGSjogo/'; // Caminho p/ sons
@@ -214,11 +217,26 @@ function initGame() {
 
 // ==================== FUNÇÕES DE PERSISTÊNCIA ====================
 // Salva o progresso antes de redirecionar
+<<<<<<< HEAD
 function saveProgressAndRedirect() {  
   // Salva a pontuação acumulada e vidas para as próximas fases
   localStorage.setItem("accumulatedScore", player.score.toString());
   localStorage.setItem("lives", player.lives.toString());
   
+=======
+function saveProgressAndRedirect() {
+  // Recupera a pontuação acumulada das fases anteriores
+  const accumulatedScore = parseInt(localStorage.getItem("accumulatedScore")) || 0;
+  
+  // Soma com os pontos da fase atual
+  const newAccumulatedScore = accumulatedScore + player.score;
+  
+  // Salva a pontuação acumulada e vidas para as próximas fases
+  localStorage.setItem("accumulatedScore", newAccumulatedScore.toString());
+  localStorage.setItem("lives", player.lives.toString());
+  
+  // Redireciona para a próxima fase
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   window.location.href = 'fase3.html';
 }
 
@@ -344,7 +362,12 @@ function toggleMute() {
 
 // Reinicia o jogo
 function restartGame() {
+<<<<<<< HEAD
   localStorage.setItem("lives", "3");
+=======
+  // Salva apenas as vidas, mantém a pontuação acumulada
+  localStorage.setItem("lives", player.lives.toString());
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   window.location.reload();
 }
 
@@ -391,13 +414,22 @@ function showGameOver() {
   finalScore.textContent = player.score;
   gameOverScreen.style.display = 'flex';
 
+<<<<<<< HEAD
   enviarPontuacaoParaBanco(player.score);
 
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   if (!soundMuted) {
     GameOverSound.currentTime = 0;
     GameOverSound.play().catch(e => console.log("Erro ao reproduzir som"));
   }
+<<<<<<< HEAD
   }
+=======
+  
+  localStorage.removeItem("accumulatedScore");
+}
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 
 // Mostra seleção de nível quando dá gameover
 const levelSelectFromGameOver = document.querySelector("#levelSelectFromGameOver")
@@ -657,6 +689,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+<<<<<<< HEAD
 // ==================== CONEXÃO COM O BANCO ====================
 async function enviarPontuacaoParaBanco(pontosFinais) {
     const idUsuario = sessionStorage.getItem("usuarioId");
@@ -688,3 +721,5 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
         console.error("Erro ao conectar com o servidor:", error);
     }
 }
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e

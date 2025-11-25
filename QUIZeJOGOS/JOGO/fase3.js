@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ==================== GUARDA-COSTAS (SEGURANÇA) ====================
 // Verifica se o usuário está logado. Se não estiver, manda pro Login.
 if (!sessionStorage.getItem("usuarioId")) {
@@ -12,6 +13,8 @@ if (!sessionStorage.getItem("usuarioId")) {
 }
 // ===================================================================
 
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 // ==================== CONFIGURAÇÕES GLOBAIS ====================
 const IMGS_PATH = './IMGSjogo/'; // Caminho p/ imagens
 const SOUNDS_PATH = './IMGSjogo/'; // Caminho p/ sons
@@ -176,7 +179,11 @@ function showLevelComplete() {
 function initGame() {
   // Carrega dados salvos ou usa padrão
   const savedLives = parseInt(localStorage.getItem("lives")) || 3;
+<<<<<<< HEAD
   const accumulatedScore = parseInt(localStorage.getItem("accumulatedScore")) || 0;
+=======
+  const savedScore = 0;
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   
   currentLevel = 3;
   
@@ -189,7 +196,11 @@ function initGame() {
     size: 20,
     speed: 2,
     lives: savedLives,
+<<<<<<< HEAD
     score: accumulatedScore,
+=======
+    score: savedScore,
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
     invincible: false,
     image: new Image()
   };
@@ -339,7 +350,12 @@ function toggleMute() {
 
 // Reinicia o jogo
 function restartGame() {
+<<<<<<< HEAD
   localStorage.setItem("lives", "3");
+=======
+  localStorage.setItem("score", player.score.toString());
+  localStorage.setItem("lives", player.lives.toString());
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   window.location.reload();
 }
 
@@ -386,12 +402,20 @@ function showGameOver() {
   finalScore.textContent = player.score;
   gameOverScreen.style.display = 'flex';
 
+<<<<<<< HEAD
   enviarPontuacaoParaBanco(player.score);
 
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
   if (!soundMuted) {
     GameOverSound.currentTime = 0;
     GameOverSound.play().catch(e => console.log("Erro ao reproduzir som"));
   }
+<<<<<<< HEAD
+=======
+  
+  localStorage.removeItem("accumulatedScore");
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
 }
 
 // Mostra seleção de nível quando dá gameover
@@ -409,7 +433,11 @@ function showLevelComplete() {
 function nextLevel() {
   if (currentLevel < totalLevels) {
     // Salva o progresso
+<<<<<<< HEAD
     localStorage.setItem("accumulatedScore", player.score.toString());
+=======
+    localStorage.setItem("score", player.score.toString());
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
     localStorage.setItem("lives", player.lives.toString());
     
     // Redireciona para a próxima fase
@@ -657,6 +685,7 @@ function gameLoop() {
   requestAnimationFrame(gameLoop);
 }
 
+<<<<<<< HEAD
 // ==================== CONEXÃO COM O BANCO ====================
 async function enviarPontuacaoParaBanco(pontosFinais) {
     const idUsuario = sessionStorage.getItem("usuarioId");
@@ -688,3 +717,5 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
         console.error("Erro ao conectar com o servidor:", error);
     }
 }
+=======
+>>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
