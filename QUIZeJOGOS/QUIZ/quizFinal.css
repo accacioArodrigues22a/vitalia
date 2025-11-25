@@ -1,0 +1,164 @@
+body {
+  background-image: url(../../assets/fundoQUIZfinal.jpeg);
+  background-size: cover; /* Garante que a imagem cubra tudo */
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* Evita barras de rolagem */
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ================= MENU (NAVBAR) ================= */
+.navbar {
+  background-color: #12180B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 5rem; /* Altura fixa para não empurrar o resto */
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 3.125rem;
+}
+
+.menu {
+  display: flex;
+  gap: 5rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Estilos do Dropdown (Mantidos do seu original) */
+ul { list-style: none; margin: 0; padding: 0; }
+ul li { display: inline-block; position: relative; }
+ul li a { display: block; padding: 1.875rem 1.563rem; color: white; text-decoration: none; text-align: center; }
+ul li ul.dropdown { position: absolute; top: 100%; left: 0; display: none; min-width: 12.5rem; z-index: 999; }
+ul li ul.dropdown li { display: block; }
+ul li:hover>ul.dropdown { display: block; }
+ul li ul li ul { position: absolute; top: 0; left: 100%; display: none; min-width: 12.5rem; z-index: 999; }
+ul li ul li:hover>ul { display: block; }
+ul li ul li a { padding: 0.75rem 0.938rem; }
+
+/* Cores do Menu */
+.nutrientes>a, .nutrientes>ul { background-color: rgba(40, 54, 25, 0.9); color: white; }
+.funcoes>a, .funcoes>ul { background-color: rgba(66, 14, 13, 0.9); color: white; }
+.fases>a, .fases>ul { background-color: rgba(161, 207, 107, 0.9); color: white; }
+.extras>a, .extras>ul { background-color: rgba(251, 176, 45, 0.9); color: white; }
+
+/* Hover Effects */
+.menu li a:hover, .menu li a.ativo { color: #FBB02D; font-size: 1.02rem; transition: 0.4s; }
+.menu li a.ativo1 { color: #A1CF6B; }
+
+/* ================= LAYOUT PRINCIPAL (CORREÇÃO) ================= */
+
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza Horizontalmente */
+  align-items: center;     /* Centraliza Verticalmente */
+  height: calc(100vh - 5rem); /* Altura total menos o menu */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* O Card Amarelo */
+.flex-center-flex-column {
+  width: 45%;
+  min-width: 350px; /* Garante que não fique muito fino em telas pequenas */
+  height: auto;     /* Altura automática para caber o conteúdo */
+  min-height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  background-color: #FBB02D;
+  color: white;
+  
+  /* AQUI ESTÁ O SEGREDO DO ESPAÇAMENTO: */
+  gap: 1.5rem; /* Espaço entre Texto, Botão Verde e Botão Vermelho */
+  padding: 3rem 0; /* Espaço interno em cima e embaixo */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Sombra para destacar */
+}
+
+/* Textos */
+.texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: "Literata", sans-serif;
+  font-weight: 700;
+  font-size: 3rem; /* Aumentei um pouco para dar destaque */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-family: "Literata", sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Containers dos Botões (Para garantir que centralizem) */
+.botao-verde, 
+.botao-vermelho {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo dos Botões */
+.verde, .vermelho {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: white;
+  border: none;
+  
+  /* Tamanho fixo para ficarem iguais */
+  width: 300px; 
+  padding: 1rem 0;
+  
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.verde {
+  background-color: #56792E;
+}
+
+.vermelho {
+  background-color: #420E0D;
+}
+
+/* Efeitos Hover */
+.verde:hover, .vermelho:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* User Info no Menu */
+.user-info {
+  margin-left: 2rem;
+}

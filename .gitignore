@@ -1,0 +1,22 @@
+# ---- Dependências ----
+node_modules/
+
+# ---- editor ----
+.vscode/
+
+# ---- arquivos temporários / index / cache ----
+*.idx
+
+# ---- logs ----
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- sistemas ----
+.DS_Store
+Thumbs.db
+
+# ---- ambiente ----
+.env
+.env.*
