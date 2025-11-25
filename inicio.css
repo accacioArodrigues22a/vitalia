@@ -106,9 +106,7 @@ body::before {
 
 .btn-entrar:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-<<<<<<< HEAD
+}   
 .btn-semcadastro {
     background-color: transparent; 
     color: white;
@@ -117,11 +115,7 @@ body::before {
 
 .btn-semcadastro:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
-/* Media Query para Responsividade */
+}   
 @media (max-width: 768px) {
     .conteudo-sobreposto {
         padding: 40px;

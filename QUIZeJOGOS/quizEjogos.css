@@ -131,14 +131,12 @@ p {
 .texto{
   margin-bottom:5rem;
   margin-top: 10rem;
-<<<<<<< HEAD
+
 }
 
 .logout-box p {
     width: auto !important;
     margin-top: 1rem !important;
     font-size: 1rem !important;
-    text-align: center;
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+  text-align: center;
 }

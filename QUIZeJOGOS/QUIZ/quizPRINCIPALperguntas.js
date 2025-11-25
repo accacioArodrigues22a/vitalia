@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-if (!sessionStorage.getItem("usuarioId")) {
+if (!sessionStorage.getItem("usuarioId")) {     
     alert("Ops! Você precisa fazer login para jogar e salvar sua pontuação.");
     
     window.location.href = "../../LOGIN/login.html"; 
     
     throw new Error("Acesso negado: Usuário não logado.");
-}
-
-
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+}       
 document.addEventListener('DOMContentLoaded', function() {
   // Elementos da DOM
   const telas = {

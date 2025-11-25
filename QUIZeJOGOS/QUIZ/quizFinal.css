@@ -1,37 +1,23 @@
 body {
   background-image: url(../../assets/fundoQUIZfinal.jpeg);
-<<<<<<< HEAD
-  background-size: cover; /* Garante que a imagem cubra tudo */
+background-size: cover; /* Garante que a imagem cubra tudo */
   background-position: center;
   padding: 0;
   margin: 0;
   overflow: hidden; /* Evita barras de rolagem */
   height: 100vh;
   font-family: 'Lato', sans-serif;
-}
-
-/* ================= MENU (NAVBAR) ================= */
-=======
-
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  height: 100vh;
-}
-
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+} 
 .navbar {
   background-color: #12180B;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-<<<<<<< HEAD
-  height: 5rem; /* Altura fixa para não empurrar o resto */
+height: 5rem; /* Altura fixa para não empurrar o resto */
   position: relative;
   z-index: 10;
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+
 }
 
 .logo img {
@@ -48,9 +34,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
-}
-
-<<<<<<< HEAD
+} 
 /* Estilos do Dropdown (Mantidos do seu original) */
 ul { list-style: none; margin: 0; padding: 0; }
 ul li { display: inline-block; position: relative; }
@@ -89,10 +73,7 @@ ul li ul li a { padding: 0.75rem 0.938rem; }
   width: 45%;
   min-width: 350px; /* Garante que não fique muito fino em telas pequenas */
   height: auto;     /* Altura automática para caber o conteúdo */
-  min-height: 60%;
-=======
-
-
+min-height: 60%;
 ul {
   list-style: none;
   margin: 0;
@@ -327,13 +308,11 @@ margin-top: -5rem;
 
 .flex-center-flex-column {
   width: 45%;
-  height: 60%;
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-<<<<<<< HEAD
+flex-direction: column;
   border-radius: 2rem;
   background-color: #FBB02D;
   color: white;
@@ -345,8 +324,7 @@ margin-top: -5rem;
 }
 
 /* Textos */
-=======
-  border-radius:2rem;
+border-radius:2rem;
   background-color: #FBB02D;
   color: white;
   gap: 1rem;
@@ -360,17 +338,13 @@ h1 {
 
 h2 {
   font-family: "Literata", sans-serif;
-  font-weight: lighter;
-}
-
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+  font-weight: lighter; }
 .texto {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-<<<<<<< HEAD
+width: 100%;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -434,8 +408,7 @@ h2 {
 
 /* User Info no Menu */
 .user-info {
-  margin-left: 2rem;
-=======
+margin-left: 2rem;
 }
 
 .verde {
@@ -471,6 +444,5 @@ h2 {
   cursor: pointer;
   box-shadow: 0 0.4rem 1.4rem 0 #420E0D;
   transition: 0.4s;
-  transform: translateY(-0.1rem);
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+transform: translateY(-0.1rem);
 }

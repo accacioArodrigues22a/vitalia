@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-if (!sessionStorage.getItem("usuarioId")) {
+if (!sessionStorage.getItem("usuarioId")) { 
     alert("Ops! Você precisa fazer login para jogar e salvar sua pontuação.");
     
     window.location.href = "../../../LOGIN/login.html"; 
     
     throw new Error("Acesso negado: Usuário não logado.");
-}
-
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+} 
 document.addEventListener("DOMContentLoaded", () => {
     const fade = document.getElementById("fade"); // fundo escuro por tras dos modais
     const modals = document.querySelectorAll(".modal"); // todos os modais
@@ -55,8 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modals.forEach(m => m.classList.remove("show")); // some todos os modais
     });
 
-<<<<<<< HEAD
-    // LÓGICA DO BOTÃO COMEÇAR COM BLOQUEIO DE LOGIN
+// LÓGICA DO BOTÃO COMEÇAR COM BLOQUEIO DE LOGIN
     const botaoComecar = document.querySelector(".com");
     
     if (botaoComecar) {
@@ -83,24 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             startSound.currentTime = 0;
             startSound.play().catch(err => console.log("Erro ao tocar som:", err));
 
-=======
-    // botao comecar com som + leve delay pra mudar de pagina
-    const botaoComecar = document.querySelector(".com");
-    if (botaoComecar) {
-        const startSound = new Audio("start.mp3"); // som de start
-
-        botaoComecar.addEventListener("click", (e) => {
-            e.preventDefault(); // impede de mudar de pagina antes do som tocar
-
-            startSound.currentTime = 0;
-            startSound.play().catch(err => console.log("Erro ao tocar som:", err)); // play do som
-
-            // espera 200ms e vai pra pagina de selecao
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
-            setTimeout(() => {
+        setTimeout(() => {
                 window.location.href = "../select/select.html";
             }, 200);
         });
-    }
-
-});
+    }});

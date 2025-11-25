@@ -65,10 +65,7 @@ p, li {
 
 .como {
   padding: .6rem 3rem;
-<<<<<<< HEAD
-  margin-bottom: 1rem;
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+margin-bottom: 1rem;
   background-color: #931F1D;
   border: none;
   color: #fff;
@@ -261,8 +258,7 @@ p, li {
 .com,
 .best,
 .como {
-<<<<<<< HEAD
-    animation: slideUp 0.6s ease-out forwards;
+  animation: slideUp 0.6s ease-out forwards;
     opacity: 0; /* Começa invisível */
 }
 
@@ -286,24 +282,7 @@ p, li {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-=======
-  animation: slideUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.com {
-  animation-delay: 0.2s;
-}
-
-.best {
-  animation-delay: 0.4s;
-}
-
-.como {
-  animation-delay: 0.6s;
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
-}
+    } }
 
 @keyframes slideUp {
   from {
@@ -472,6 +451,4 @@ p, li {
   transform: rotate(90deg);
 }
 .rotacionarEsquerda {
-  transform: rotate(180deg);
-}
-
+  transform: rotate(180deg); }

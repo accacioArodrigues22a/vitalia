@@ -248,8 +248,7 @@ ul li ul li a {
 
 .logo:hover{
   transform: scale(1.05);
-  transition: 0.4s;
-<<<<<<< HEAD
+transition: 0.4s;
 }
 
 /* Modifique a sua classe existente no final do arquivo */
@@ -409,7 +408,5 @@ header nav a {
 
 .btn-confirm {
     background-color: #c0392b; /* Vermelho para indicar saída */
-    color: white;
-=======
->>>>>>> 7f622369727fb6e1e1f04a4eb8348ba400d3e82e
+  color: white;
 }
