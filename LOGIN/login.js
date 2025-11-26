@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnLogin = document.getElementById("btnLogin");
 
     // CONFIGURAÇÃO DO SERVIDOR (Troque se for pra nuvem)
-    const API_URL = "http://localhost:3333"; 
+    const API_URL = API_BASE_URL;
 
     if (btnLogin) {
         btnLogin.addEventListener("click", async (e) => {
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const response = await fetch(`${API_URL}/login`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    credentials: 'include',
                     body: JSON.stringify({ email, senha })
                 });
 

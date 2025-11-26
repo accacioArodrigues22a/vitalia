@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const btnCadastrar = document.getElementById("btnCadastrar");
 
     // CONFIGURAÇÃO DO SERVIDOR (Troque se for pra nuvem)
-    const API_URL = "http://localhost:3333"; 
+    const API_URL = API_BASE_URL;
 
     if (btnCadastrar) {
         btnCadastrar.addEventListener("click", async (e) => {
@@ -38,6 +38,7 @@ const btnCadastrar = document.getElementById("btnCadastrar");
                 const response = await fetch(`${API_URL}/cadastrar`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    credentials: 'include',
                     body: JSON.stringify({ nome, email, senha })
                 });
 

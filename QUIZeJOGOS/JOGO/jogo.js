@@ -629,9 +629,7 @@ drawHUD();
 
 // Continua o loop
 requestAnimationFrame(gameLoop);
-}
-
-// ==================== CONEXÃO COM O BANCO ====================
+} 
 async function enviarPontuacaoParaBanco(pontosFinais) {
   const idUsuario = sessionStorage.getItem("usuarioId");
   
@@ -642,22 +640,26 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
   }
 
   try {
-      const response = await fetch('http://localhost:3333/salvar-pontuacao', {
+      // 🔴 MUDANÇA AQUI: 
+      // 1. Usamos crases `` (aquelas inclinadas) em vez de aspas simples ''
+      // 2. Colocamos ${API_BASE_URL} no lugar do localhost
+      const response = await fetch(`${API_BASE_URL}/salvar-pontuacao`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
           body: JSON.stringify({
               userId: idUsuario,
               pontos: pontosFinais
           })
       });
       
+      // ... o resto continua igual ...
       const data = await response.json();
       console.log("Status do salvamento:", data.message);
       
       if(data.newRecord) {
           console.log("NOVO RECORDE REGISTRADO!");
-          // Opcional: Mostrar uma mensagem na tela pro usuário
-      }
+    }
   } catch (error) {
       console.error("Erro ao conectar com o servidor:", error);
   }

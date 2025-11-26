@@ -1,10 +1,16 @@
+
+//COMANDO PARA RODAR O BACKEND: npx nodemon server.js
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: true, // Aceita qualquer origem (necessário para a nuvem dinâmica)
+    credentials: true // Permite cookies e headers de autorização
+}));
 
 // ==================================================================
 // 1. CONEXÃO COM O BANCO (USANDO POOL PARA EVITAR QUEDAS) 🔌

@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => { // 1. Recupera a pontuação salva no arquivo de perguntas
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Recupera a pontuação salva no arquivo de perguntas
     const mostRecentScore = localStorage.getItem("mostRecentScore");
     const finalScore = document.getElementById('finalScore');
 
     // 2. Mostra na tela e Salva no Banco
     if (mostRecentScore) {
-        // Atualiza o texto na tela
+        // Atualiza o texto na tela 
+        // (Se o seu quiz tem 10 perguntas, deixe 10. Se tem 6, mude para 6 aqui)
         finalScore.innerText = `${mostRecentScore} de 10`;
 
         // Chama a função para salvar no banco
@@ -20,13 +22,17 @@ document.addEventListener("DOMContentLoaded", () => { // 1. Recupera a pontuaç�
 async function enviarPontuacaoParaBanco(pontosFinais) {
     const idUsuario = sessionStorage.getItem("usuarioId");
     
-    // Se não tiver usuário, para aqui (mas o HTML já deve ter bloqueado)
+    // Se não tiver usuário logado, para aqui
     if (!idUsuario) return;
 
     try {
-        const response = await fetch('http://localhost:3333/salvar-pontuacao', {
+        // 🔴 IMPLEMENTAÇÃO DA API DINÂMICA AQUI:
+        // 1. Usamos API_BASE_URL (do api.js) em vez de localhost
+        // 2. Mantivemos o credentials: 'include' para funcionar na escola
+        const response = await fetch(`${API_BASE_URL}/salvar-pontuacao`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            credentials: 'include', 
             body: JSON.stringify({
                 userId: idUsuario,
                 pontos: pontosFinais
@@ -42,8 +48,4 @@ async function enviarPontuacaoParaBanco(pontosFinais) {
     } catch (error) {
         console.error("Erro ao salvar pontuação:", error);
     }
-} // pega a pontuação mais recente q tá salva no localStorage
-const mostRecentScore = localStorage.getItem("mostRecentScore");
-
-// pega o elemento do HTML que mostra a pontuação final
-const finalScore = document.getElementById('finalScore');   finalScore.innerText = `${mostRecentScore} de 6`;
+}
